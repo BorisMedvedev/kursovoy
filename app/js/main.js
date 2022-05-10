@@ -46,14 +46,15 @@ var swiper = new Swiper(".project-slider", {
 	slidesPerView: 3,
 	spaceBetween: 50,
 	slidesPerGroup: 1,
+	centeredSlides: true,
 	loop: true,
 	navigation: {
-		nextEl: ".slider-btn--next",
-		prevEl: ".slider-btn--prev",
+		nextEl: ".project-slider__btn--next",
+		prevEl: ".project-slider__btn--prev",
 	},
-	pagination: {
-		el: ".gallery-slider__pagination",
-		type: "fraction",
-		clickable: true,
-	},
+	// pagination: {
+	// 	el: ".gallery-slider__pagination",
+	// 	type: "fraction",
+	// 	clickable: true,
+	// },
 });
