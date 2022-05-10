@@ -1,0 +1,173 @@
+.catalog {
+  padding: 80px 0;
+
+  &__title {
+    margin-bottom: 19px;
+  }
+
+  &__text p {
+    margin: 0 0 39px;
+    max-width: 1080px;
+    line-height: 2;
+  }
+
+  &__author-information {
+    max-width: 750px;
+  }
+
+  &__author-img {
+    margin-bottom: 30px;
+  }
+
+  &__author-title {
+    margin: 0 0 7px;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  &__author-date {
+    font-size: 12px;
+    line-height: 2.1;
+    color: $dark-grey;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.accordion {
+  max-width: 800px;
+  width: 100%;
+
+
+  .ac {
+    margin-top: 0;
+    border: none;
+    background-color: $white;
+  }
+
+  .ac-trigger {
+    padding: 41px 0 41px 0;
+    font-family: "OpenSans";
+    font-weight: 600;
+    font-size: 24px;
+    border: none;
+    color: $text-default;
+    transition: color 0.2s;
+    border-bottom: 1px solid $border-top;
+
+    &:focus {
+      color: $text-default;
+    }
+
+    &:hover {
+      color: $normal;
+    }
+
+    &:active {
+      color: $focus;
+    }
+  }
+
+  .is-active .ac-trigger {
+    color: $focus;
+  }
+
+  .ac .ac-trigger::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $ec;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    transition: background-color 0.2s;
+
+  }
+
+  .ac .ac-trigger:hover::after {
+    background-color: $border;
+    border: 2px solid transparent;
+  }
+
+  .ac .ac-trigger:active::after {
+    border: 2px solid $normal;
+
+  }
+
+  .ac .ac-trigger::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 9px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../../images/icons/arrow.svg');
+    filter: invert(100%) sepia(0%) saturate(7465%) hue-rotate(338deg) brightness(92%) contrast(108%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    z-index: 50;
+  }
+
+  .ac.is-active>.ac-header .ac-trigger::after {
+    content: "";
+    background: $border;
+    border: 2px solid $normal;
+
+  }
+
+  .ac.is-active>.ac-header .ac-trigger::before {
+    top: 44%;
+    transform: rotate(180deg);
+  }
+
+  .ac .ac-panel .ac-text {
+    padding: 28px 0 22px;
+    font-family: "OpenSans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $text-default;
+    line-height: 2;
+  }
+}
+
+.ac-text {
+  display: flex;
+  border-bottom: 1px solid $border-top;
+
+  &__list {
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+
+  }
+
+  &__item {}
+
+  &__link {
+    border-bottom: 1px solid transparent;
+    transition: border 0.2s;
+
+    &:focus {
+      color: $white;
+    }
+
+    &:hover {
+      border-bottom: 1px solid $hover;
+    }
+
+    &:active {
+      color: $focus;
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
