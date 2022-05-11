@@ -9,6 +9,21 @@
 
   &__text-link {
     color: $normal;
+    border-bottom: 1px solid transparent;
+    transition: border 0.2s;
+
+    &:focus {
+      color: $white;
+    }
+
+    &:hover {
+      border-bottom: 1px solid $normal;
+    }
+
+    &:active {
+      color: $focus;
+      border-color: $focus;
+    }
   }
 
   &__partners-title {
@@ -16,38 +31,54 @@
     font-weight: 600;
     font-size: 24px;
   }
+
+  &__partners-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .project-slider {
+  max-width: 1456px;
   margin: 0 auto;
-  position: relative;
   overflow: hidden;
 
-  &__btn--next {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    background-color: aqua;
-    border-radius: 50px;
-    cursor: pointer;
-    z-index: 10;
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+    width: 100%;
+    height: 150px;
+    background: $white;
+    filter: grayscale(1);
+    border: 1px solid $ec;
+    transition: filter 0.2s;
 
+    &:focus {
+      border-color: $normal;
+    }
   }
 
-  &__btn--prev {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    background-color: aqua;
-    border-radius: 50px;
-    cursor: pointer;
-    z-index: 10;
+  &__img {
+    opacity: 0.3;
+    transition: opacity 0.2s;
   }
 
+  .project-slider__link:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+
+
+  .project-slider__link:hover .project-slider__img {
+    opacity: 1;
+  }
+
+  .project-slider__link:active {
+    filter: grayscale(0);
+    opacity: 1;
+    border-color: $normal;
+  }
 }
