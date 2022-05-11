@@ -1,8 +1,8 @@
 {
-  "name": "start_gulp",
+  "name": "kursovoy",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,15 +23,11 @@
     "gulp-svgo": "^2.2.1",
     "gulp-tinypng-compress": "^1.2.5",
     "gulp-uglify": "^3.0.2",
-    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.0",
     "jquery-form-styler": "^2.0.2",
-    "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
-    "rateyo": "^2.3.2",
-    "sass": "^1.43.4",
-    "simplebar": "^5.3.6",
-    "slick-carousel": "^1.8.1"
+    "sass": "^1.43.4"
+    
   },
   "dependencies": {
     "accordion-js": "^3.3.0",
