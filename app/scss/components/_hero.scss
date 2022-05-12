@@ -1,10 +1,11 @@
 .hero {
-    padding: 140px 0 121px;
-    background-image: url("../images/bg/main-bg1.jpg");
+    overflow: hidden;
+    padding: 137px 0 121px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     color: $white;
+
 
     &__title {
         max-width: 570px;
@@ -15,7 +16,7 @@
     }
 
     &__descr {
-        margin-bottom: 86px;
+        margin-bottom: 90px;
         max-width: 560px;
     }
 
@@ -29,7 +30,7 @@
     &__link {
         display: inline-block;
         position: relative;
-        padding: 22px 34px;
+        padding: 21px 32px;
         background-color: $normal;
         border-radius: 100px;
         border: 3px solid transparent;
@@ -72,6 +73,20 @@
             &::before {
                 opacity: 0;
             }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 7px;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        filter: alfa(opacity=0);
+
+        &--first {
+            filter: alfa(opacity=1);
+            opacity: 1;
         }
     }
 }

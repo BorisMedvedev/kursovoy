@@ -1,8 +1,8 @@
 @import "mixins";
-@import "vars";
-@import "global";
 @import "libs";
+@import "vars";
 @import "fonts";
+@import "global";
 @import "./components/header";
 @import "./components/hero";
 @import "./components/about";
@@ -11,3 +11,4 @@
 @import "./components/events";
 @import "./components/project";
 @import "./components/contacts";
+@import "./components/footer";

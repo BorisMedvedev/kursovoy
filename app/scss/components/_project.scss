@@ -1,5 +1,9 @@
 .project {
-  padding: 80px 0 80px;
+  padding: 0 0 80px;
+
+  &__title {
+    margin-bottom: 18px;
+  }
 
   &__text p {
     margin: 0 0 21px;
@@ -45,6 +49,7 @@
   overflow: hidden;
 
   &__link {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,28 +62,79 @@
     transition: filter 0.2s;
 
     &:focus {
-      border-color: $normal;
+      outline: none;
+      border: 1px solid $focus;
+    }
+
+    &__img {
+      opacity: 0.3;
+      transition: opacity 0.2s;
     }
   }
+}
 
-  &__img {
-    opacity: 0.3;
-    transition: opacity 0.2s;
+.project-slider__link:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.project-slider__link:hover .project-slider__img {
+  opacity: 1;
+}
+
+.project-slider__link:active {
+  filter: grayscale(0);
+  opacity: 1;
+  border-color: $normal;
+}
+
+.tultip {
+  position: relative;
+  margin: 0 5px 0 3px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #9D5CD0;
+  border-radius: 50px;
+  transform: translateY(-4px);
+
+  &:focus {
+    outline: 0;
+    border: 1px solid #9D5CD0;
+    background-color: #D1A9F0;
   }
 
-  .project-slider__link:hover {
-    filter: grayscale(0);
-    opacity: 1;
+  &:hover {
+    background-color: #D1A9F0;
   }
 
 
-  .project-slider__link:hover .project-slider__img {
-    opacity: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 2px;
+    height: 10px;
+    background-image: url('../../images/icons/i.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(297deg) brightness(101%) contrast(104%);
+    transition: color 0.2s, filter 0.2s;
   }
 
-  .project-slider__link:active {
-    filter: grayscale(0);
-    opacity: 1;
-    border-color: $normal;
+  &:active {
+
+    background-color: #9D5CD0;
   }
+
+  &:active::before {
+
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(327deg) brightness(96%) contrast(104%);
+  }
+
 }

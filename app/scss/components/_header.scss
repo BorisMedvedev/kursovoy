@@ -29,6 +29,8 @@
 }
 
 .logo {
+  display: inline-block;
+
   &__img {
     transition: filter 0.2s;
     fill: $white;

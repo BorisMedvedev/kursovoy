@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blanchard</title>
 
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
 
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
 
     <link href="css/jquery.formstyler.css" rel="stylesheet" />
     <link href="ss/jquery.formstyler.theme.css" rel="stylesheet" />
@@ -16,7 +19,6 @@
 
 <body>
   <div class="site">
-
     <header class="header">
   <div class="header__top">
     <div class="container">
@@ -222,9 +224,7 @@
     </div>
   </div>
 </header>
-
     <main>
-
       <section class="hero">
     <h1 class="sr-only">Художественная Галерея Blanchard</h1>
     <div class="container">
@@ -232,6 +232,11 @@
         <div class="hero__descr">
             <p>Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для
                 новых предложений.</p>
+        </div>
+        <div>
+            <img class="hero__img hero__img--first" src='images/bg/main-bg1.jpg' id="image_1" />
+            <img class="hero__img" src='images/bg/main-bg2.jpg' id="image_2" />
+            <img class="hero__img" src='images/bg/main-bg23.jpg' id="image_3" />
         </div>
         <a class="hero__link" href="#">Подписаться на рассылку</a>
     </div>
@@ -1269,7 +1274,7 @@
 </section>
       <section class="project">
   <div class="container">
-    <h3 class="project__title title">
+    <h3 class="title project__title ">
       Проекты
     </h3>
     <div class="project__text">
@@ -1277,12 +1282,20 @@
         Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
         фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
         уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде
-        всего, постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует
+        всего, постоянное информационно-пропагандистское<button class="tultip tultip-1 btn-reset"
+          data-tippy-root></button>обеспечение
+        нашей
+        деятельности однозначно фиксирует
         необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей
-        оппозиции могут быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Банальные, но
+        оппозиции могут быть рассмотрены<button class="tultip tultip-2 btn-reset"></button>исключительно в разрезе
+        маркетинговых и
+        финансовых<button class="tultip tultip-1 btn-reset"></button>предпосылок. Банальные, но
         неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям,
         которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости.
         Подробнее: <a class="project__text-link link-ul" href="#">blanchard-art.ru/projects</a>
+
+
+
       </p>
     </div>
     <h4 class="project__partners-title">Партнёры проектов:</h4>
@@ -1297,30 +1310,30 @@
 
           <li class="project-slider__slide swiper-slide">
             <a class="project-slider__link" href="">
-              <img class="project-slider__img" src="images/slider-2/slie1.png" alt="">
+              <img class="project-slider__img" src="images/slider-2/slie1.png" alt="картинка">
             </a>
           </li>
 
           <li class="project-slider__slide swiper-slide">
             <a class="project-slider__link" href="">
-              <img class="project-slider__img" src="images/slider-2/slie2.png" alt="">
+              <img class="project-slider__img" src="images/slider-2/slie2.png" alt="картинка">
             </a>
           </li>
           <li class="project-slider__slide swiper-slide">
             <a class="project-slider__link" href="">
-              <img class="project-slider__img" src="images/slider-2/slie3.png" alt="">
-            </a>
-          </li>
-
-          <li class="project-slider__slide swiper-slide">
-            <a class="project-slider__link" href="">
-              <img class="project-slider__img" src="images/slider-2/slie4.png" alt="">
+              <img class="project-slider__img" src="images/slider-2/slie3.png" alt="картинка">
             </a>
           </li>
 
           <li class="project-slider__slide swiper-slide">
             <a class="project-slider__link" href="">
-              <img class="project-slider__img" src="images/slider-2/slie5.png" alt="">
+              <img class="project-slider__img" src="images/slider-2/slie4.png" alt="картинка">
+            </a>
+          </li>
+
+          <li class="project-slider__slide swiper-slide">
+            <a class="project-slider__link" href="">
+              <img class="project-slider__img" src="images/slider-2/slie5.png" alt="картинка">
             </a>
           </li>
 
@@ -1356,17 +1369,83 @@
   </div>
 
 </section>
-      
+      <section class="contacts">
+  <div class="contacts__form">
+    <div class="container">
+      <div class="contacts__inner">
+        <div class="contacts__form-info">
+          <div class="contacts__form-info-text">Шоурум №4</div>
+          <address class="contacts__form-info-address">
+            Леонтьевский переулок, дом 5/1
+          </address>
 
+        </div>
 
+        <form class="contacts-form">
+          <label class="contacts-form__labl">
+            <input class="contacts-form__input" type="text" placeholder="Имя*">
+          </label>
+          <label class="contacts-form__label">
+            <input class="contacts-form__input" type="text" placeholder="Телефон*">
+          </label>
+          <button class="contacts-form__btn btn-reset" type="submit">Заказать обратный звонок</button>
+        </form>
 
+        <div class="contacts__form-social">
 
-    </main>
-    <footer></footer>
+          <div class="contacts__form-social-title">
+            Связаться в один клик
+          </div>
+
+          <ul class="social-list list-reset">
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--whatsapp" href="#"></a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--telegram" href="#"></a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
 
   </div>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+  <div id="contacts__map"></div>
+
+</section>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a class="logo link-ul" href="#">
+        <img class="logo__img" loading="lazy" src="images/icons/logo.svg" width="173" height="40"
+          alt="логотип blanchard" />
+      </a>
+      <ul class="footer-social-list list-reset">
+        <li class="footer-social-list__item">
+          <a class="footer-social-list__link footer-social-list__link--vk " href="#"></a>
+        </li>
+        <li class="footer-social-list__item">
+          <a class="footer-social-list__link footer-social-list__link--inst " href="#"></a>
+        </li>
+        <li class="footer-social-list__item">
+          <a class="footer-social-list__link footer-social-list__link--fb " href="#"></a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</footer>
+  </div>
+
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/jquery.formstyler.min.js"></script>
   <script src="js/main.min.js "></script>
 </body>

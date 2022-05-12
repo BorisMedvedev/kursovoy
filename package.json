@@ -9,6 +9,7 @@
   "author": "Medvedev Boris",
   "license": "ISC",
   "devDependencies": {
+    "accordion-js": "^3.3.0",
     "browser-sync": "^2.27.7",
     "choices.js": "^9.0.1",
     "del": "^6.0.0",
@@ -26,12 +27,11 @@
     "jquery": "^3.6.0",
     "jquery-form-styler": "^2.0.2",
     "normalize.css": "^8.0.1",
-    "sass": "^1.43.4"
-    
+    "sass": "^1.43.4",
+    "swiper": "^8.1.4",
+    "tippy.js": "^6.3.7"
   },
   "dependencies": {
-    "accordion-js": "^3.3.0",
-    "swiper": "^8.1.4",
     "trim-newlines": "^4.0.2"
   }
 }
