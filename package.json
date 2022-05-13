@@ -28,6 +28,7 @@
     "jquery-form-styler": "^2.0.2",
     "normalize.css": "^8.0.1",
     "sass": "^1.43.4",
+    "simplebar": "^5.3.6",
     "swiper": "^8.1.4",
     "tippy.js": "^6.3.7"
   },

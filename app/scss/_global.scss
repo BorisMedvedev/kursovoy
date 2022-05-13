@@ -139,8 +139,8 @@ img {
     transition: color 0.2s;
     transition: color 0.2s, filter 0.2s;
     outline: none;
-    z-index: 2;
-    
+    z-index: 99;
+
 
     &:focus::after {
         position: absolute;
