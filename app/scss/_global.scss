@@ -1,179 +1,187 @@
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    font-family: "OpenSans", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    font-style: normal;
-    line-height: 1.3;
-    color: $text-default;
-    background-color: $white;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.3;
+  color: $text-default;
+  background-color: $white;
 }
 
 .container {
-    margin: 0 auto;
-    padding: 0 15px;
-    max-width: 1630px;
-    width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1630px;
+  width: 100%;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 .list-reset {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .site {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .btn-reset {
-    padding: 0;
-    background-color: transparent;
-    border: transparent;
-    color: inherit;
-    cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  border: transparent;
+  color: inherit;
+  cursor: pointer;
 }
 
 
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .title {
-    margin: 0 0 15px;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 48px;
+  margin: 0 0 15px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
 }
 
 .slider-btn {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background-color: $ec;
-    border-radius: 50px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: $ec;
+  border-radius: 50px;
+  outline: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:focus {
+    outline: 2px solid $normal;
+  }
+
+  &:hover {
     outline: 2px solid transparent;
-    cursor: pointer;
+    background-color: $border;
+  }
+
+  &:active {
+    background: $border;
+    outline: 2px solid $border;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 8px;
+    top: 11px;
+    left: 8px;
+    background-image: url('../../images/icons/arrow.svg');
+    filter: invert(100%) sepia(99%) saturate(7451%) hue-rotate(203deg) brightness(91%) contrast(100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     transition: background-color 0.2s;
+  }
 
-    &:focus {
-        outline: 2px solid $normal;
-    }
+  &--prev::before {
+    transform: rotate(90deg);
+  }
 
-    &:hover {
-        outline: 2px solid transparent;
-        background-color: $border;
-    }
-
-    &:active {
-        background: $border;
-        outline: 2px solid $border;
-    }
-
-    &::before {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 12px;
-        height: 8px;
-        top: 11px;
-        left: 8px;
-        background-image: url('../../images/icons/arrow.svg');
-        filter: invert(100%) sepia(99%) saturate(7451%) hue-rotate(203deg) brightness(91%) contrast(100%);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        transition: background-color 0.2s;
-    }
-
-    &--prev::before {
-        transform: rotate(90deg);
-    }
-
-    &--next::before {
-        transform: rotate(-90deg);
-        left: 10px;
-    }
+  &--next::before {
+    transform: rotate(-90deg);
+    left: 10px;
+  }
 }
 
 .swiper-button-disabled {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .link-ul {
-    position: relative;
-    transition: color 0.2s;
+  position: relative;
+  transition: color 0.2s;
+  transition: color 0.2s, filter 0.2s;
+  outline: none;
+  z-index: 99;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -8px;
+    left: -6px;
+    right: -6px;
+    bottom: -8px;
+    background-color: $focus;
+    color: $white;
+    z-index: -1;
     transition: color 0.2s, filter 0.2s;
-    outline: none;
-    z-index: 99;
+    opacity: 0;
+  }
 
+  &:focus {
+    color: $white;
+  }
 
-    &:focus::after {
-        position: absolute;
-        content: "";
-        display: block;
-        top: -8px;
-        left: -6px;
-        right: -6px;
-        bottom: -8px;
-        background-color: $focus;
-        color: $white;
-        z-index: -1;
-        transition: color 0.2s, filter 0.2s;
-    }
+  &:focus::after {
+    opacity: 1;
+  }
 
-    &:hover {
-        color: $hover;
-    }
+  &:hover {
+    color: $hover;
+  }
 
-    &:hover::before {
-        filter: invert(19%) sepia(30%) saturate(7421%) hue-rotate(217deg) brightness(92%) contrast(107%);
-    }
+  &:hover::before {
+    filter: invert(19%) sepia(30%) saturate(7421%) hue-rotate(217deg) brightness(92%) contrast(107%);
+  }
 
-    &:active {
-        outline: 0;
-        color: $focus;
-    }
+  &:active {
+    outline: 0;
+    color: $focus;
+  }
 
-    &:active::before {
-        filter: invert(69%) sepia(18%) saturate(2784%) hue-rotate(236deg) brightness(98%) contrast(91%);
-    }
+  &:active::before {
+    filter: invert(69%) sepia(18%) saturate(2784%) hue-rotate(236deg) brightness(98%) contrast(91%);
+  }
 
-    &:active::after {
-        background-color: transparent;
-    }
+  &:active::after {
+    background-color: transparent;
+  }
 }
