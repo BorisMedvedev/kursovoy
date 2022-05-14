@@ -2,8 +2,8 @@
 
   &__form {
     padding: 38px 0;
-    border-top: 1px solid #CACACA;
-    border-bottom: 1px solid #CACACA;
+    border-top: 1px solid $border-top;
+    border-bottom: 1px solid $border-top;
   }
 
   &__inner {
@@ -41,23 +41,23 @@
     width: 270px;
     height: 50px;
     border: none;
-    background-color: #fff;
-    border: 1px solid #333333;
+    background-color: $white;
+    border: 1px solid $text-default;
     border-radius: 100px;
     outline: none;
     cursor: pointer;
     transition: background-color 0.2s;
 
     &:focus {
-      background-color: #EAEAEA;
+      background-color: $hov;
     }
 
     &:hover {
-      background-color: #EAEAEA;
+      background-color: $hov;
     }
 
     &:active {
-      background-color: #fff;
+      background-color: $white;
     }
 
     &::placeholder {
@@ -65,18 +65,36 @@
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
-      color: #999999;
+      color: $dark-grey;
     }
   }
 
   &__btn {
     height: 50px;
     padding: 5px 35px;
-    border: 2px solid #9D5CD0;
+    border: 2px solid $normal;
     border-radius: 100px;
     font-weight: 700;
     font-size: 18px;
-    color: #9D5CD0;
+    color: $normal;
+    transition: background-color 0.2s, color 0.2s;
+    outline: none;
+
+    &:focus {
+      background-color: $focus;
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $normal;
+      color: $white;
+    }
+
+    &:active {
+      background-color: $border;
+      color: $text-default;
+    }
+
   }
 }
 
@@ -110,7 +128,7 @@
 
     &:active {
       opacity: 1;
-      border: 1px solid #9643A4;
+      border: 1px solid $focus;
       border-radius: 50px;
     }
 
