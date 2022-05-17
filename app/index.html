@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blanchard</title>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU">
     </script>
 
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
@@ -264,80 +264,81 @@
     </div>
 </section>
       <section class="gallery">
-    <div class="container">
+  <div class="container">
 
-        <div class="gallery__inner">
+    <div class="gallery__inner">
 
-            <div class="gallery-filter">
+      <div class="gallery-filter">
 
-                <h3 class="gallery-filter__title title">Галерея</h3>
-                <span class="gallery-filter__filter">Фильтр:</span>
+        <h3 class="gallery-filter__title title">Галерея</h3>
+        <span class="gallery-filter__filter">Фильтр:</span>
 
-                <select class="gallery-filter__select filter-styles">
-                    <option class="gallery-filter__option">Живопись</option>
-                    <option class="gallery-filter__option">Рисунок</option>
-                    <option class="gallery-filter__option">Скульптура</option>
-                </select>
+        <select class="gallery-filter__select filter-styles">
+          <option class="gallery-filter__option">Живопись</option>
+          <option class="gallery-filter__option">Рисунок</option>
+          <option class="gallery-filter__option">Скульптура</option>
+        </select>
 
-                <form class="gallery-filter__form">
-                    <label class="gallery-filter__label">
-                        <input class="gallery-filter__input filter-styles" type="radio" name="radio">
-                        <span class="gallery-filter__text">XIX век</span>
-                    </label>
-                    <label class="gallery-filter__label">
-                        <input class="gallery-filter__input filter-styles" type="radio" name="radio" checked>
-                        <span class="gallery-filter__text">XX век</span>
-                    </label>
-                    <label class="gallery-filter__label">
-                        <input class="gallery-filter__input filter-styles" type="radio" name="radio">
-                        <span class="gallery-filter__text">Современность</span>
-                    </label>
-                </form>
+        <form class="gallery-filter__form">
+          <label class="gallery-filter__label">
+            <input class="gallery-filter__input filter-styles" type="radio" name="radio">
+            <span class="gallery-filter__text">XIX век</span>
+          </label>
+          <label class="gallery-filter__label">
+            <input class="gallery-filter__input filter-styles" type="radio" name="radio" checked>
+            <span class="gallery-filter__text">XX век</span>
+          </label>
+          <label class="gallery-filter__label">
+            <input class="gallery-filter__input filter-styles" type="radio" name="radio">
+            <span class="gallery-filter__text">Современность</span>
+          </label>
+        </form>
 
+      </div>
+
+      <div class="gallery-slider">
+        <div class="gallery-slider__inner">
+
+          <ul class="gallery-slider__list list-reset swiper-wrapper">
+            <li class="gallery-slider__item swiper-slide">
+              <img src="images/slider/slide1.jpg" alt="фотография">
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <img src="images/slider/slide2.jpg" alt="фотография">
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <img src="images/slider/slide3.jpg" alt="фотография">
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <img src="images/slider/slide4.jpg" alt="фотография">
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <img src="images/slider/slide5.jpg" alt="фотография">
+            </li>
+            <li class="gallery-slider__item swiper-slide">
+              <img src="images/slider/slide6.jpg" alt="фотография">
+            </li>
+          </ul>
+
+          <div class="gallery-slider__btn-box">
+
+            <div class="slider-btn slider-btn--prev">
+              <span class="sr-only">кнопка предыдущий слайд</span>
+            </div>
+            <div class="gallery-slider__pagination"></div>
+            <div class="slider-btn slider-btn--next">
+              <span class="sr-only">кнопка следующий слайд</span>
             </div>
 
-            <div class="gallery-slider">
-                <div class="gallery-slider__inner">
-
-                    <ul class="gallery-slider__list list-reset swiper-wrapper">
-                        <li class="gallery-slider__item swiper-slide">
-                            <img src="images/slider/slide1.jpg" alt="" watch="350" height="350">
-                        </li>
-                        <li class="gallery-slider__item swiper-slide">
-                            <img src="images/slider/slide2.jpg" alt="" watch="350" height="350">
-                        </li>
-                        <li class="gallery-slider__item swiper-slide">
-                            <img src="images/slider/slide3.jpg" alt="" watch="350" height="350">
-                        </li>
-                        <li class="gallery-slider__item swiper-slide">
-                            <img src="images/slider/slide4.jpg" alt="" watch="350" height="350">
-                        </li>
-                        <li class="gallery-slider__item swiper-slide">
-                            <img src="images/slider/slide5.jpg" alt="" watch="350" height="350">
-                        </li>
-                        <li class="gallery-slider__item swiper-slide">
-                            <img src="images/slider/slide6.jpg" alt="" watch="350" height="350">
-                        </li>
-                    </ul>
-
-                    <div class="gallery-slider__btn-box">
-
-                        <div class="slider-btn slider-btn--prev">
-                            <span class="sr-only">кнопка предыдущий слайд</span>
-                        </div>
-                        <div class="gallery-slider__pagination"></div>
-                        <div class="slider-btn slider-btn--next">
-                            <span class="sr-only">кнопка следующий слайд</span>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
+          </div>
         </div>
 
+      </div>
     </div>
+
+  </div>
 </section>
+
       <section class="catalog">
 
   <div class="container">
@@ -1368,6 +1369,7 @@
 
 </section>
       <section class="contacts">
+  <h2 class="sr-only">Один из ведущих флорентийских художников Кватроченто</h2>
   <div class="contacts__form">
     <div class="container">
       <div class="contacts__inner">
