@@ -1,11 +1,11 @@
 (function ($) {
   $(function () {
-    $('.filter-styles').styler();
+    $(".filter-styles").styler();
   });
-  new Accordion('.accordion', {});
+  new Accordion(".accordion", {});
 })(jQuery);
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   var swiper1 = new Swiper(".gallery-slider__inner", {
     slidesPerView: 3,
     spaceBetween: 50,
@@ -55,44 +55,44 @@ document.addEventListener('DOMContentLoaded', function () {
     // },
     loop: true,
     navigation: {
-      nextEl: ".project-slider__btn--next",
-      prevEl: ".project-slider__btn--prev",
+      nextEl: ".slider-btn--next",
+      prevEl: ".slider-btn--prev",
     },
-
   });
-
 
   ymaps.ready(init);
 
   function init() {
     var myMap = new ymaps.Map("contacts__map", {
       center: [55.75846806898367, 37.60108849999989],
-      zoom: 16
+      zoom: 16,
     });
 
-    var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
-      iconLayout: 'default#image',
-      iconImageHref: '../images/icons/group.svg',
-      iconImageSize: [20, 20],
-      iconImageOffset: [-3, -42]
-    });
+    var myPlacemark = new ymaps.Placemark(
+      [55.75846806898367, 37.60108849999989],
+      {},
+      {
+        iconLayout: "default#image",
+        iconImageHref: "../images/icons/group.svg",
+        iconImageSize: [20, 20],
+        iconImageOffset: [-3, -42],
+      }
+    );
     myMap.geoObjects.add(myPlacemark);
     myMap.behaviors.disable("scrollZoom");
   }
 
-
-  tippy('.tultip-1', {
-    content: 'Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно',
+  tippy(".tultip-1", {
+    content:
+      "Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно",
   });
 
-  tippy('.tultip-2', {
-    content: 'Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно',
+  tippy(".tultip-2", {
+    content:
+      "Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно",
   });
-  tippy('.tultip-3', {
-    content: 'Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно',
+  tippy(".tultip-3", {
+    content:
+      "Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно",
   });
-
-
-
-
 });
