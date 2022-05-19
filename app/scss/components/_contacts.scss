@@ -2,8 +2,8 @@
 
   &__form {
     padding: 38px 0;
-    border-top: 1px solid $border-top;
-    border-bottom: 1px solid $border-top;
+    border-top: 1px solid $silver;
+    border-bottom: 1px solid $silver;
   }
 
   &__inner {
@@ -42,18 +42,18 @@
     height: 50px;
     border: none;
     background-color: $white;
-    border: 1px solid $text-default;
+    border: 1px solid $mineshaft;
     border-radius: 100px;
     outline: none;
     cursor: pointer;
     transition: background-color 0.2s;
 
     &:focus {
-      background-color: $hov;
+      background-color: $gallery;
     }
 
     &:hover {
-      background-color: $hov;
+      background-color: $gallery;
     }
 
     &:active {
@@ -65,34 +65,34 @@
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
-      color: $dark-grey;
+      color: $dustygray;
     }
   }
 
   &__btn {
     height: 50px;
     padding: 5px 35px;
-    border: 2px solid $normal;
+    border: 2px solid $amethyst;
     border-radius: 100px;
     font-weight: 700;
     font-size: 18px;
-    color: $normal;
+    color: $amethyst;
     transition: background-color 0.2s, color 0.2s;
     outline: none;
 
     &:focus {
-      background-color: $focus;
+      background-color: $royalpurple;
       color: $white;
     }
 
     &:hover {
-      background-color: $normal;
+      background-color: $amethyst;
       color: $white;
     }
 
     &:active {
-      background-color: $border;
-      color: $text-default;
+      background-color: $bilobaflower;
+      color: $mineshaft;
     }
 
   }
@@ -128,7 +128,7 @@
 
     &:active {
       opacity: 1;
-      border: 1px solid $focus;
+      border: 1px solid $royalpurple;
       border-radius: 50px;
     }
 

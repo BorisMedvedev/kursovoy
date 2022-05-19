@@ -1,9 +1,3 @@
-(function ($) {
-  $(function () {
-    $(".filter-styles").styler();
-  });
-  new Accordion(".accordion", {});
-})(jQuery);
 
 document.addEventListener("DOMContentLoaded", function () {
   var swiper1 = new Swiper(".gallery-slider__inner", {

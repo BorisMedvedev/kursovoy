@@ -34,7 +34,7 @@
     display: inline-block;
     position: relative;
     padding: 21px 32px;
-    background-color: $normal;
+    background-color: $amethyst;
     border-radius: 100px;
     border: 3px solid transparent;
     font-weight: 700;
@@ -52,7 +52,7 @@
       width: 106%;
       height: 130%;
       display: block;
-      border: 2px solid $hover;
+      border: 2px solid $heliotrope;
       border-radius: 100px;
       opacity: 0;
       transition: opacity 0.2s;
@@ -67,11 +67,11 @@
         opacity: 0;
       }
 
-      border: 3px solid $hover;
+      border: 3px solid $heliotrope;
     }
 
     &:active {
-      background-color: $focus;
+      background-color: $royalpurple;
 
       &::before {
         opacity: 0;

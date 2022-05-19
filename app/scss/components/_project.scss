@@ -12,7 +12,7 @@
   }
 
   &__text-link {
-    color: $normal;
+    color: $amethyst;
     border-bottom: 1px solid transparent;
     transition: border 0.2s;
 
@@ -21,12 +21,12 @@
     }
 
     &:hover {
-      border-bottom: 1px solid $normal;
+      border-bottom: 1px solid $amethyst;
     }
 
     &:active {
-      color: $focus;
-      border-color: $focus;
+      color: $royalpurple;
+      border-color: $royalpurple;
     }
   }
 
@@ -60,7 +60,7 @@
     filter: grayscale(1);
     transition: filter 0.2s;
     outline: none;
-    border: 1px solid $ec;
+    border: 1px solid $gallery;
 
     &::before {
       position: absolute;
@@ -68,7 +68,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      border: 1px solid $focus;
+      border: 1px solid $royalpurple;
       opacity: 0;
     }
 
@@ -95,7 +95,7 @@
 .project-slider__link:active {
   filter: grayscale(0);
   opacity: 1;
-  border-color: $normal;
+  border-color: $amethyst;
 }
 
 .tultip {
@@ -104,18 +104,18 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  border: 1px solid #9D5CD0;
+  border: 1px solid $amethyst;
   border-radius: 50px;
   transform: translateY(-4px);
 
   &:focus {
     outline: 0;
-    border: 1px solid #9D5CD0;
-    background-color: #D1A9F0;
+    border: 1px solid $amethyst;
+    background-color: $bilobaflower;
   }
 
   &:hover {
-    background-color: #D1A9F0;
+    background-color: $bilobaflower;
   }
 
 
@@ -139,7 +139,7 @@
 
   &:active {
 
-    background-color: #9D5CD0;
+    background-color: $amethyst;
   }
 
   &:active::before {

@@ -19,7 +19,7 @@
     left: 0;
     right: 0;
     top: 100px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba($black, 0.4);
     z-index: 1;
 
     &-inner {
@@ -78,7 +78,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    fill: #fff;
+    fill: $white;
     transition: color 0.2s, filter 0.2s;
   }
 
@@ -110,7 +110,7 @@
     padding-right: 15px;
     color: $white;
     font-size: 18px;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-weight: 400;
 
     &::before {
@@ -139,7 +139,7 @@
   padding: 40px;
   width: 300px;
   height: 300px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba($black, 0.6);
 
 
   &__item {
@@ -163,15 +163,15 @@
     transition: border 0.2s;
 
     &:focus {
-      border: 2px solid $normal;
+      border: 2px solid $amethyst;
     }
 
     &:hover {
-      border: 2px solid $normal;
+      border: 2px solid $amethyst;
     }
 
     &:active {
-      border: 2px solid $border;
+      border: 2px solid $bilobaflower;
 
       &::after {
         content: "";
@@ -212,8 +212,8 @@
     outline: none;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.58);
-    color: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid rgba($white, 0.58);
+    color: rgba($white, 0.85);
     transition: border 0.2s;
 
     &::placeholder {
@@ -222,19 +222,19 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 25px;
-      color: rgba(255, 255, 255, 0.85);
+      color: rgba($white, 0.85);
     }
 
     &:focus {
-      border-bottom: 1px solid $hover;
+      border-bottom: 1px solid $heliotrope;
     }
 
     &:hover {
-      border-bottom: 1px solid $hover;
+      border-bottom: 1px solid $heliotrope;
     }
 
     &:active {
-      border-bottom: 1px solid $focus;
+      border-bottom: 1px solid $royalpurple;
     }
   }
 
@@ -254,7 +254,7 @@
     &:focus {
       outline: none;
       outline-offset: 3px;
-      outline: 2px solid $hover;
+      outline: 2px solid $heliotrope;
     }
 
     &:hover {
@@ -278,7 +278,7 @@
   height: 220px;
   right: 19px;
   top: 40px;
-  background-color: #000;
+  background-color: $black;
 }
 
 .simplebar-scrollbar {

@@ -28,7 +28,7 @@
   &__author-date {
     font-size: 12px;
     line-height: 2.1;
-    color: $dark-grey;
+    color: $dustygray;
   }
 
   &__wrapper {
@@ -55,27 +55,27 @@
     font-weight: 600;
     font-size: 24px;
     border: none;
-    color: $text-default;
+    color: $mineshaft;
     transition: color 0.2s;
-    border-bottom: 1px solid $border-top;
+    border-bottom: 1px solid $silver;
     outline: none;
 
 
     &:focus {
-      color: $text-default;
+      color: $mineshaft;
     }
 
     &:hover {
-      color: $normal;
+      color: $amethyst;
     }
 
     &:active {
-      color: $focus;
+      color: $royalpurple;
     }
   }
 
   .is-active .ac-trigger {
-    color: $focus;
+    color: $royalpurple;
   }
 
 
@@ -88,7 +88,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-color: $ec;
+    background-color: $gallery;
     border: 2px solid transparent;
     border-radius: 100px;
     transition: background-color 0.2s;
@@ -96,12 +96,12 @@
   }
 
   .ac .ac-trigger:hover::after {
-    background-color: $border;
+    background-color: $bilobaflower;
     border: 2px solid transparent;
   }
 
   .ac .ac-trigger:active::after {
-    border: 2px solid $normal;
+    border: 2px solid $amethyst;
 
   }
 
@@ -125,8 +125,8 @@
 
   .ac.is-active>.ac-header .ac-trigger::after {
     content: "";
-    background: $border;
-    border: 2px solid $normal;
+    background: $bilobaflower;
+    border: 2px solid $amethyst;
 
   }
 
@@ -140,14 +140,14 @@
     font-family: "OpenSans", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: $text-default;
+    color: $mineshaft;
     line-height: 2;
   }
 }
 
 .ac-text {
   display: flex;
-  border-bottom: 1px solid $border-top;
+  border-bottom: 1px solid red;
 
   &__list {
     &:not(:last-child) {
@@ -156,9 +156,7 @@
 
   }
 
-  &__item {}
-
-  &__link {
+    &__link {
     border-bottom: 1px solid transparent;
     transition: border 0.2s;
 
@@ -167,11 +165,11 @@
     }
 
     &:hover {
-      border-bottom: 1px solid $hover;
+      border-bottom: 1px solid $heliotrope;
     }
 
     &:active {
-      color: $focus;
+      color: $royalpurple;
       border-bottom: 1px solid transparent;
     }
   }
