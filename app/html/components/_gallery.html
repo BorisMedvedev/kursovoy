@@ -5,14 +5,16 @@
 
       <div class="gallery-filter">
 
-        <h3 class="gallery-filter__title title">Галерея</h3>
-        <span class="gallery-filter__filter">Фильтр:</span>
+        <div class="gallery-filter__box">
+          <h3 class="gallery-filter__title title">Галерея</h3>
+          <span class="gallery-filter__filter">Фильтр:</span>
 
-        <select class="gallery-filter__select filter-styles">
-          <option class="gallery-filter__option">Живопись</option>
-          <option class="gallery-filter__option">Рисунок</option>
-          <option class="gallery-filter__option">Скульптура</option>
-        </select>
+          <select name="Выбор" class="gallery-filter__select">
+            <option class="gallery-filter__option">Живопись</option>
+            <option class="gallery-filter__option">Рисунок</option>
+            <option class="gallery-filter__option">Скульптура</option>
+          </select>
+        </div>
 
         <form class="gallery-filter__form">
           <label class="gallery-filter__label">
@@ -57,11 +59,11 @@
 
           <div class="gallery-slider__btn-box">
 
-            <div class="slider-btn slider-btn--prev">
+            <div class="slider-btn gallery-slider__btn--prev">
               <span class="sr-only">кнопка предыдущий слайд</span>
             </div>
             <div class="gallery-slider__pagination"></div>
-            <div class="slider-btn slider-btn--next">
+            <div class="slider-btn gallery-slider__btn--next">
               <span class="sr-only">кнопка следующий слайд</span>
             </div>
 

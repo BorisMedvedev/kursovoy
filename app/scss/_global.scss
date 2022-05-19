@@ -134,6 +134,10 @@ img {
   pointer-events: none;
 }
 
+.swiper-button-disabled::before {
+  opacity: 0.4;
+}
+
 .link-ul {
   position: relative;
   transition: color 0.2s;

@@ -1,4 +1,4 @@
-
+"use strict";
 document.addEventListener("DOMContentLoaded", function () {
   var swiper1 = new Swiper(".gallery-slider__inner", {
     slidesPerView: 3,
@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     //   disableOnInteraction: false,
     // },
     navigation: {
-      nextEl: ".slider-btn--next",
-      prevEl: ".slider-btn--prev",
+      nextEl: ".gallery-slider__btn--next",
+      prevEl: ".gallery-slider__btn--prev",
     },
     pagination: {
       el: ".gallery-slider__pagination",
@@ -23,14 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 3,
     spaceBetween: 50,
     slidesPerGroup: 1,
-    loop: true,
+
     // autoplay: {
     //   delay: 2000,
     //   disableOnInteraction: false,
     // },
     navigation: {
       nextEl: ".events-swiper__next",
-      prevEl: ".slider-btn--prev",
+      prevEl: ".events-swiper__prev",
     },
     pagination: {
       el: ".gallery-slider__pagination",
@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
     //   delay: 2000,
     //   disableOnInteraction: false,
     // },
-    loop: true,
+
     navigation: {
-      nextEl: ".slider-btn--next",
-      prevEl: ".slider-btn--prev",
+      nextEl: ".project-slider__btn-next",
+      prevEl: ".project-slider__btn-prev",
     },
   });
 
@@ -90,3 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
       "Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно",
   });
 });
+
+const defaultSelect = () => {
+  const element = document.querySelector(".gallery-filter__select");
+  const choices = new Choices(element, {
+    searchEnabled: false,
+  });
+};
+defaultSelect();
