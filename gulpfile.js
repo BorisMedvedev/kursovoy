@@ -1,11 +1,5 @@
-const {
-  task,
-  src,
-  dest,
-  watch,
-  parallel,
-  series
-} = require("gulp");
+"use strict";
+const { task, src, dest, watch, parallel, series } = require("gulp");
 const scss = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 const autoprefixer = require("gulp-autoprefixer");
@@ -18,21 +12,23 @@ const svgSprite = require("gulp-svg-sprite");
 const fileInclude = require("gulp-file-include");
 
 const htmlInclude = () => {
-  return src(['app/html/*.html']) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы													
-    .pipe(fileInclude({
-      prefix: '@',
-      basepath: '@file',
-    }))
-    .pipe(dest('app')) // указываем, в какую папку поместить готовый файл html
+  return src(["app/html/*.html"]) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы
+    .pipe(
+      fileInclude({
+        prefix: "@",
+        basepath: "@file",
+      })
+    )
+    .pipe(dest("app")) // указываем, в какую папку поместить готовый файл html
     .pipe(browserSync.stream());
-}
+};
 
 function scripts() {
   return src([
-      "node_modules/swiper/swiper-bundle.min.js",
-      "node_modules/accordion-js/dist/accordion.min.js",
-      "app/js/main.js",
-    ])
+    "node_modules/swiper/swiper-bundle.min.js",
+    "node_modules/accordion-js/dist/accordion.min.js",
+    "app/js/main.js",
+  ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -43,11 +39,13 @@ function svg() {
   return src("app/images/icons/**/*.svg")
     .pipe(
       svgo({
-        plugins: [{
-          removeAttrs: {
-            attrs: "(fill|srtoke|data.*)",
+        plugins: [
+          {
+            removeAttrs: {
+              attrs: "(fill|srtoke|data.*)",
+            },
           },
-        }, ],
+        ],
       })
     )
     .pipe(
@@ -116,7 +114,8 @@ function build() {
       "app/fonts/**/*",
       "app/images/**/*",
       "app/js/main.min.js",
-    ], {
+    ],
+    {
       base: "app",
     }
   ).pipe(dest("dist"));
