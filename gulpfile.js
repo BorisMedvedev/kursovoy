@@ -1,5 +1,12 @@
 "use strict";
-const { task, src, dest, watch, parallel, series } = require("gulp");
+const {
+  task,
+  src,
+  dest,
+  watch,
+  parallel,
+  series
+} = require("gulp");
 const scss = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 const autoprefixer = require("gulp-autoprefixer");
@@ -25,11 +32,11 @@ const htmlInclude = () => {
 
 function scripts() {
   return src([
-    "node_modules/swiper/swiper-bundle.min.js",
-    "node_modules/choices.js/public/assets/scripts/choices.js",
-    "node_modules/accordion-js/dist/accordion.min.js",
-    "app/js/main.js",
-  ])
+      "node_modules/swiper/swiper-bundle.min.js",
+      "node_modules/choices.js/public/assets/scripts/choices.js",
+      "node_modules/accordion-js/dist/accordion.min.js",
+      "app/js/main.js",
+    ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -40,13 +47,11 @@ function svg() {
   return src("app/images/icons/**/*.svg")
     .pipe(
       svgo({
-        plugins: [
-          {
-            removeAttrs: {
-              attrs: "(fill|srtoke|data.*)",
-            },
+        plugins: [{
+          removeAttrs: {
+            attrs: "(fill|srtoke|data.*)",
           },
-        ],
+        }, ],
       })
     )
     .pipe(
@@ -115,8 +120,7 @@ function build() {
       "app/fonts/**/*",
       "app/images/**/*",
       "app/js/main.min.js",
-    ],
-    {
+    ], {
       base: "app",
     }
   ).pipe(dest("dist"));
