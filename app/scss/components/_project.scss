@@ -156,7 +156,7 @@
 
 }
 
-.project-slider__btn-prev {
+.project__partners-btn-prev {
   transition: opacity 0.3s;
 
   &::before {
@@ -164,7 +164,7 @@
   }
 }
 
-.project-slider__btn-next {
+.project__partners-btn-next {
   transition: opacity 0.3s;
 
   &::before {
@@ -172,10 +172,21 @@
   }
 }
 
-.project-slider__btn-prev.swiper-button-disabled {
+.project__partners-btn-prev.swiper-button-disabled {
   opacity: 1;
 }
 
-.project-slider__btn-next.swiper-button-disabled {
+.project__partners-btn-next.swiper-button-disabled {
   opacity: 1;
+}
+
+
+.tippy-box[data-theme~='amethyst'][data-placement^='top']>.tippy-arrow::before {
+  border-top-color: $amethyst;
+}
+
+.tippy-box[data-theme~='amethyst'] {
+  background-color: $amethyst;
+  color: $white;
+
 }

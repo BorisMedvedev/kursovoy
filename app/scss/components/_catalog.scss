@@ -66,7 +66,7 @@
 
   &__btn {
     position: relative;
-    padding: 42px 0;
+    padding: 43px 0 44px;
     width: 100%;
     text-align: left;
     font-weight: 600;
@@ -147,7 +147,7 @@
 
   &__inner-content {
     display: flex;
-    padding: 37px 0;
+    padding: 25px 0;
 
   }
 
@@ -166,7 +166,7 @@
   &__inner-btn {
     font-weight: 400;
     font-size: 16px;
-    line-height: 32px;
+    line-height: 31px;
     border-bottom: 1px solid transparent;
     transition: border 0.3s;
 

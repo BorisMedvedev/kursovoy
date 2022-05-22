@@ -13,9 +13,13 @@
   }
 
   &__form-info-text {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     font-weight: 600;
     font-size: 24px;
+  }
+
+  &__form-info {
+    margin-top: -12px;
   }
 
   &__form-info-address {
@@ -23,7 +27,7 @@
   }
 
   &__form-social-title {
-    margin-bottom: 7px;
+    margin-bottom: 4px;
     font-weight: 600;
     font-size: 24px;
 

@@ -314,11 +314,19 @@
     color: $white;
   }
 
-  .gallery-slider__btn--prev::before {
+  .gallery-slider__btn-prev::before {
     transform: rotate(90deg);
   }
 
-  .gallery-slider__btn--next::before {
+  .gallery-slider__btn-next::before {
     transform: rotate(-90deg);
   }
+}
+
+.gallery-slider__btn-prev.swiper-button-disabled {
+  opacity: 1;
+}
+
+.gallery-slider__btn-next.swiper-button-disabled {
+  opacity: 1;
 }
