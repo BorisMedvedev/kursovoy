@@ -181,6 +181,26 @@
 
   }
 
+  &__inner-btn--active {
+    position: relative;
+    color: $white;
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -3px;
+      left: -6px;
+      right: -6px;
+      bottom: -3px;
+      background-color: $royalpurple;
+      color: $white;
+      z-index: -1;
+      transition: color 0.2s, filter 0.2s;
+      opacity: 1;
+    }
+  }
+
   &__inner-img {
     position: relative;
     margin-right: 36px;
@@ -216,9 +236,9 @@
   &__inner-content-noflex {
     display: block;
 
-
   }
 }
+
 
 .inner-link {
   font-weight: 600;

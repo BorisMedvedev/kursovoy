@@ -7,6 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blanchard</title>
 
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+
+
   <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU">
   </script>
   <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
@@ -16,7 +27,7 @@
 
 <body>
   <div class="site">
-    <header class="header">
+    <header id="header" class="header">
   <div class="header__top">
     <div class="container">
       <div class="header__top-inner">
@@ -355,7 +366,7 @@
 
     <div class="catalog__wrapper">
 
-      <div class="catalog__author-information catalog__author-information--active">
+      <div class="catalog__author-information catalog__author-information--active" data-target="domenico">
         <img class="catalog__author-img" src="images/author.jpg" alt="Доменико Гирландайо" width="750" height="470">
         <h4 class="catalog__author-title">Доменико Гирландайо</h4>
         <span class="catalog__author-date">2 июня 1448 — 11 января 1494.</span>
@@ -370,7 +381,7 @@
         </div>
       </div>
 
-      <div class="catalog__author-information">
+      <div class="catalog__author-information" data-target="two">
         <img class="catalog__author-img" src="images/author2.jpg" alt="Доменико Гирландайо" width="750" height="470">
         <h4 class="catalog__author-title">Что мы о нём знаем?</h4>
         <span class="catalog__author-date"></span>
@@ -391,82 +402,94 @@
 
               <ul class="accordion-list__inner-list list-reset">
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Бенедетто ди Биндо</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Бенедетто ди
+                    Биндо</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Бергоньоне, Амброджо</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Бергоньоне,
+                    Амброджо</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Биссоло, Франческо</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Биссоло,
+                    Франческо</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Больтраффио, Джованни</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Больтраффио,
+                    Джованни</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Бонсиньори, Франческо</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Бонсиньори,
+                    Франческо</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Боттичини, Рафаэлло</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Боттичини,
+                    Рафаэлло</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Брамантино</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Брамантино</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Бреа, Людовико</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Бреа, Людовико</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Бьяджо д’Антонио Туччи</button>
-                </li>
-              </ul>
-
-              <ul class="accordion-list__inner-list list-reset">
-                <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Веккьетта</button>
-                </li>
-                <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Андреа Верроккьо</button>
-                </li>
-                <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Доменико Гирландайо</button>
-                </li>
-                <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Беноццо Гоццоли</button>
-                </li>
-                <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Граначчи, Франческо</button>
-                </li>
-                <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Грегорио ди Чекко</button>
-                </li>
-                <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Джованни да Удине</button>
-                </li>
-                <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Джованни ди Паоло</button>
-                </li>
-                <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Джорджоне</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Бьяджо д’Антонио
+                    Туччи</button>
                 </li>
               </ul>
 
               <ul class="accordion-list__inner-list list-reset">
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Парентино, Бернардо</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Веккьетта</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Пезеллино</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Андреа Верроккьо</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Пьетро Перуджино</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul accordion-list__inner-btn--active"
+                    data-path="domenico">Доменико
+                    Гирландайо</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Перуцци, Бальдассаре</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Беноццо Гоццоли</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Пизанелло</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Граначчи,
+                    Франческо</button>
                 </li>
                 <li class="accordion-list__inner__item">
-                  <button class="accordion-list__inner-btn btn-reset link-ul">Пинтуриккьо</button>
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Грегорио ди Чекко</button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Джованни да Удине</button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Джованни ди Паоло</button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Джорджоне</button>
+                </li>
+              </ul>
+
+              <ul class="accordion-list__inner-list list-reset">
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Парентино,
+                    Бернардо</button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Пезеллино</button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Пьетро Перуджино</button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Перуцци,
+                    Бальдассаре</button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Пизанелло</button>
+                </li>
+                <li class="accordion-list__inner__item">
+                  <button class="accordion-list__inner-btn btn-reset link-ul" data-path="two">Пинтуриккьо</button>
                 </li>
 
               </ul>
@@ -645,7 +668,9 @@
               <div class="card-events__info">
                 <span class="card-events__info-date">
                   Музей им. Щусева<br>
-                  с 20 марта по 30 апреля
+                  <time class="card-events__info-date">
+                    с 20 марта по 30 апреля
+                  </time>
                 </span>
                 <h4 class="card-events__info-title">Книжная гравюра в живом восприятии</h4>
                 <div class="card-events__info-text">
@@ -676,7 +701,9 @@
               <div class="card-events__info">
                 <span class="card-events__info-date">
                   ММОМА<br>
-                  24 марта 19:00
+                  <time class="card-events__info-date">
+                    24 марта 19:00
+                  </time>
                 </span>
                 <h4 class="card-events__info-title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h4>
                 <div class="card-events__info-text">
@@ -706,7 +733,9 @@
               <div class="card-events__info">
                 <span class="card-events__info-date">
                   Еврейский музей<br>
-                  с 31 марта по 21 апреля
+                  <time class="card-events__info-date">
+                    с 31 марта по 21 апреля
+                  </time>
                 </span>
                 <h4 class="card-events__info-title">Выставка «Формация 2020»</h4>
                 <div class="card-events__info-text">
@@ -737,7 +766,9 @@
               <div class="card-events__info">
                 <span class="card-events__info-date">
                   ММАМ<br>
-                  с 8 апреля по 20 мая
+                  <time class="card-events__info-date">
+                    с 8 апреля по 20 мая
+                  </time>
                 </span>
                 <h4 class="card-events__info-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h4>
                 <div class="card-events__info-text">
@@ -768,7 +799,9 @@
               <div class="card-events__info">
                 <span class="card-events__info-date">
                   Третьяковка на Крымском валу<br>
-                  с 30 марта по 30 апреля
+                  <time class="card-events__info-date">
+                    с 30 марта по 30 апреля
+                  </time>
                 </span>
                 <h4 class="card-events__info-title">XXIV Международная биеннале молодого искусства</h4>
                 <div class="card-events__info-text">
@@ -917,7 +950,7 @@
         </div>
 
         <form class="contacts-form">
-          <label class="contacts-form__labl">
+          <label class="contacts-form__label">
             <input class="contacts-form__input" type="text" placeholder="Имя*" />
           </label>
           <label class="contacts-form__label">
@@ -933,10 +966,11 @@
 
           <ul class="social-list list-reset">
             <li class="social-list__item">
-              <a class="social-list__link social-list__link--whatsapp" href="#"></a>
+              <a class="social-list__link social-list__link--whatsapp" href="https://clck.bar/L4582d"
+                target="_blank"></a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link social-list__link--telegram" href="#"></a>
+              <a class="social-list__link social-list__link--telegram" href="https://t.me/BMEDV" target="_blank"></a>
             </li>
           </ul>
         </div>
@@ -951,19 +985,22 @@
     <footer class="footer">
   <div class="container">
     <div class="footer__inner">
-      <a class="logo link-ul" href="#">
+      <a class="logo link-ul" href="#header">
         <img class="logo__img" loading="lazy" src="images/icons/logo.svg" width="173" height="40"
           alt="логотип blanchard" />
       </a>
       <ul class="footer-social-list list-reset">
         <li class="footer-social-list__item">
-          <a class="footer-social-list__link footer-social-list__link--vk " href="#"></a>
+          <a class="footer-social-list__link footer-social-list__link--vk " href="https://vk.com/medvedevbn"
+            target="_blank"></a>
         </li>
         <li class="footer-social-list__item">
-          <a class="footer-social-list__link footer-social-list__link--inst " href="#"></a>
+          <a class="footer-social-list__link footer-social-list__link--inst " href="https://vk.com/medvedevbn"
+            target="_blank"></a>
         </li>
         <li class="footer-social-list__item">
-          <a class="footer-social-list__link footer-social-list__link--fb " href="#"></a>
+          <a class="footer-social-list__link footer-social-list__link--fb " href="https://vk.com/medvedevbn"
+            target="_blank"></a>
         </li>
       </ul>
     </div>
@@ -971,6 +1008,7 @@
   </div>
 
 </footer>
+
   </div>
 
 

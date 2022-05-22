@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   function navigation() {
     const anchors = document.querySelectorAll(
-      ".nav__link, .hero__link, .accordion-list__inner-link"
+      ".nav__link, .hero__link, .accordion-list__inner-link, .logo, .inner-link"
     );
 
     for (let anchor of anchors) {
@@ -107,37 +107,77 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showData() {
-    const menuBtn = document.querySelectorAll(".selection-menu__btn");
+    const button = document.querySelectorAll(".selection-menu__btn");
+    const drop = document.querySelectorAll(".list-scroll");
 
-    menuBtn.forEach(function (e) {
-      const sibling = e.nextElementSibling;
-      e.addEventListener("click", () => {
-        sibling.classList.toggle("active");
-        const arrow = sibling.querySelector(".list-scroll");
+    button.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        drop.forEach((el) => {
+          el.classList.remove("active");
+        });
+        e.currentTarget
+          .closest("li")
+          .querySelector(".list-scroll")
+          .classList.toggle("active");
       });
     });
+
+    document.addEventListener("click", (e) => {
+      if (
+        !e.target.classList.contains("list-scroll") &&
+        !e.target.classList.contains("selection-menu__btn")
+      ) {
+        drop.forEach((el) => {
+          el.classList.remove("active");
+        });
+      }
+    });
   }
+
   function tulTip() {
     tippy(".tultip-1", {
       content:
         " уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде",
       theme: "amethyst",
-      fill: "yellow",
+
       trigger: "click",
     });
     tippy(".tultip-2", {
       content:
         "современных социальных резервов призывают нас к новым свершениям,",
       theme: "amethyst",
-      fill: "yellow",
+
       trigger: "click",
     });
     tippy(".tultip-3", {
       content:
         "с не уникальными данными до степени совершенной неузнаваемости.",
       theme: "amethyst",
-      fill: "yellow",
+
       trigger: "click",
+    });
+  }
+
+  function tabsContent() {
+    let tabsBtn = document.querySelectorAll(".accordion-list__inner-btn");
+    let tabsItem = document.querySelectorAll(".catalog__author-information");
+
+    tabsBtn.forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        const path = e.currentTarget.dataset.path;
+
+        tabsBtn.forEach(function (btn) {
+          btn.classList.remove("accordion-list__inner-btn--active");
+          e.currentTarget.classList.add("accordion-list__inner-btn--active");
+
+          tabsItem.forEach(function (el) {
+            el.classList.remove("catalog__author-information--active");
+            document
+              .querySelector(`[data-target='${path}']`)
+              .classList.add("catalog__author-information--active");
+          });
+        });
+      });
     });
   }
 
@@ -150,4 +190,5 @@ document.addEventListener("DOMContentLoaded", function () {
   eventsSwiper();
   projectSlider();
   tulTip();
+  tabsContent();
 });
