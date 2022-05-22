@@ -35,6 +35,7 @@ function scripts() {
       "node_modules/swiper/swiper-bundle.min.js",
       "node_modules/choices.js/public/assets/scripts/choices.js",
       "node_modules/accordion-js/dist/accordion.min.js",
+      "node_modules/simplebar/dist/simplebar.min.js",
       "app/js/main.js",
     ])
     .pipe(concat("main.min.js"))

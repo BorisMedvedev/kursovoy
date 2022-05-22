@@ -73,6 +73,7 @@
     }
 
     &:focus::before {
+
       opacity: 1;
     }
 
@@ -81,6 +82,11 @@
       transition: opacity 0.2s;
     }
   }
+}
+
+.project-slider__link:focus {
+  filter: grayscale(1);
+  opacity: 1;
 }
 
 .project-slider__link:hover {
@@ -147,4 +153,29 @@
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(327deg) brightness(96%) contrast(104%);
   }
 
+
+}
+
+.project-slider__btn-prev {
+  transition: opacity 0.3s;
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.project-slider__btn-next {
+  transition: opacity 0.3s;
+
+  &::before {
+    transform: rotate(-90deg);
+  }
+}
+
+.project-slider__btn-prev.swiper-button-disabled {
+  opacity: 1;
+}
+
+.project-slider__btn-next.swiper-button-disabled {
+  opacity: 1;
 }

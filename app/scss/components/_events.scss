@@ -1,69 +1,90 @@
 .events {
-    position: relative;
-    padding: 80px 0;
+  position: relative;
+  padding: 80px 0;
 }
 
 .events-swiper {
-    overflow: hidden;
-    max-width: 1624px;
-    width: 100%;
+  overflow: hidden;
+  max-width: 1624px;
+  width: 100%;
 
-    &__next {
-        position: absolute;
-        top: 51.5%;
-        right: 125px;
-        z-index: 99;
-        width: 50px;
-        height: 50px;
 
-        &::before {
-            top: 20px;
-            left: 20px;
-        }
-    }
 }
 
 .card-events {
-    max-width: 500px;
-    min-height: 700px;
-    background-color: $white;
-    border: 1px solid $gallery;
+  max-width: 500px;
+  min-height: 700px;
+  background-color: $white;
+  border: 1px solid $gallery;
 
-    &__content {
-        min-height: 340px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 13px 50px 40px;
+  &__content {
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 13px 50px 40px;
+  }
 
-    }
+  &__info-date {
+    display: block;
+    max-width: 190px;
+    margin-bottom: 13px;
+    font-weight: 600;
+    font-size: 12px;
+    color: $dustygray;
+  }
 
-    &__info-date {
-        display: block;
-        max-width: 190px;
-        margin-bottom: 13px;
-        font-weight: 600;
-        font-size: 12px;
-        color: $dustygray;
-    }
+  &__info-title {
+    margin: 0 0 3px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+  }
 
-    &__info-title {
-        margin: 0 0 3px;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 1.4;
-    }
+  &__info-text p {
+    margin: 0 0 65px;
+    line-height: 2;
+  }
 
-    &__info-text p {
-        margin: 0 0 65px;
-        line-height: 2;
+  &__link {
+    color: $amethyst;
+    border-bottom: 1px solid $amethyst;
+  }
+}
 
-    }
+.events-swiper__prev {
+  position: absolute;
+  top: 51.5%;
+  left: 125px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  transition: opacity 0.3s;
 
-    &__link {
-        color: $amethyst;
-        border-bottom: 1px solid $amethyst;
+  &::before {
+    transform: rotate(90deg);
+    top: 20px;
+    left: 20px;
+  }
+}
 
+.events-swiper__next {
+  position: absolute;
+  top: 51.5%;
+  right: 125px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  transition: opacity 0.3s;
 
-    }
+  &::before {
+    left: 20px;
+    transform: rotate(-90deg);
+    top: 20px;
+
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0;
 }

@@ -21,6 +21,7 @@
   &__form {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
 
@@ -29,12 +30,90 @@
     color: $white;
   }
 
+  &__label {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
   &__filter {
     margin-bottom: 15px;
     display: block;
     color: $white;
   }
 
+  &__text {
+    color: $white;
+    transition: color 0.3s;
+  }
+
+  &__input {
+    opacity: 0;
+    position: absolute;
+
+  }
+
+  &__input-castom {
+    position: relative;
+    margin-right: 12px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    transition: border 0.3s;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50px;
+      background-color: #C283F3;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+}
+
+.gallery-filter__input:checked+.gallery-filter__input-castom::before {
+  opacity: 1;
+}
+
+.gallery-filter__input:checked+.gallery-filter__input-castom {
+  border-color: #C283F3;
+}
+
+.gallery-filter__input:checked~.gallery-filter__text {
+  color: #C283F3;
+}
+
+.gallery-filter__input:focus+.gallery-filter__input-castom {
+  border-color: #C283F3;
+}
+
+.gallery-filter__input:focus~.gallery-filter__text {
+  color: #C283F3;
+}
+
+.gallery-filter__input:hover+.gallery-filter__input-castom {
+  border-color: #C283F3;
+}
+
+.gallery-filter__input:hover~.gallery-filter__text {
+  color: #C283F3;
+}
+
+.gallery-filter__input:active+.gallery-filter__input-castom {
+  border-color: #C283F3;
+}
+
+.gallery-filter__input:active~.gallery-filter__text {
+  color: #C283F3;
 }
 
 .choices {

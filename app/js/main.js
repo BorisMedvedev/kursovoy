@@ -1,12 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+
+  const anchors = document.querySelectorAll('.nav__link, .hero__link')
+
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const blockID = anchor.getAttribute('href');
+      console.log(blockID);
+
+      document.querySelector(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    })
+  }
+
+
+
+
+
+
   var swiper1 = new Swiper(".gallery-slider__inner", {
     slidesPerView: 3,
     spaceBetween: 50,
     slidesPerGroup: 1,
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
+
     navigation: {
       nextEl: ".gallery-slider__btn--next",
       prevEl: ".gallery-slider__btn--prev",
@@ -23,29 +43,22 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceBetween: 50,
     slidesPerGroup: 1,
 
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
     navigation: {
       nextEl: ".events-swiper__next",
       prevEl: ".events-swiper__prev",
     },
-    pagination: {
-      el: ".gallery-slider__pagination",
-      type: "fraction",
-      clickable: true,
-    },
+    // pagination: {
+    //   el: ".events-swiper__pagination",
+    //   type: "fraction",
+    //   clickable: true,
+    // },
   });
   var swiper3 = new Swiper(".project-slider", {
     slidesPerView: 3,
     spaceBetween: 50,
     slidesPerGroup: 1,
     centeredSlides: true,
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
+
 
     navigation: {
       nextEl: ".project-slider__btn-next",
@@ -99,4 +112,16 @@ new Accordion('.accordion-list', {
   triggerClass: 'accordion-list__btn',
   panelClass: 'accordion-list__content',
   activeClass: 'accordion--active'
+});
+
+
+
+const menuBtn = document.querySelectorAll(".selection-menu__btn");
+
+menuBtn.forEach(function (e) {
+  const sibling = e.nextElementSibling;
+  e.addEventListener('click', () => {
+    sibling.classList.toggle('active');
+    const arrow = sibling.querySelector('.list-scroll');
+  })
 });
