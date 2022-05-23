@@ -6,9 +6,14 @@
   background-position: center;
   background-size: cover;
   color: $white;
-  animation: heroBg 10s linear infinite alternate;
+  animation: heroBg 20s linear infinite alternate;
   background-position: center;
   background-size: cover;
+  @include r(640) {
+    padding: 50px 0 45px;
+    text-align: center;
+
+  }
 
   &__title {
     max-width: 570px;
@@ -16,18 +21,31 @@
     font-weight: 700;
     font-size: 72px;
     line-height: 1.2;
+    @include r(640) {
+      font-size: 44px;
+    }
+    @include r(370) {
+      font-size: 32px;
+    }
   }
 
   &__descr {
     margin-bottom: 90px;
     max-width: 560px;
   }
-
+  
   &__descr p {
     margin: 0;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.8;
+    @include r(640) {
+      font-size: 16px;
+    }
+    @include r(370) {
+      font-size: 12px;
+line-height: 16px;
+    }
   }
 
   &__link {
@@ -42,6 +60,10 @@
     font-weight: 700;
     transition: border 0.2s;
     outline: none;
+    @include r(370) {
+      font-size: 12px;
+
+    }
 
     &::before {
       content: "";

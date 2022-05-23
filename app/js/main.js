@@ -47,6 +47,20 @@ document.addEventListener("DOMContentLoaded", function () {
         nextEl: ".events-swiper__next",
         prevEl: ".events-swiper__prev",
       },
+      // breakpoints: {
+      //   640: {
+      //     slidesPerView: 1,
+      //     spaceBetween: 20,
+      //   },
+      //   768: {
+      //     slidesPerView: 2,
+      //     spaceBetween: 40,
+      //   },
+      //   1340: {
+      //     slidesPerView: 2,
+      //     spaceBetween: 50,
+      //   },
+      // },
       // pagination: {
       //   el: ".events-swiper__pagination",
       //   type: "fraction",
@@ -63,6 +77,20 @@ document.addEventListener("DOMContentLoaded", function () {
         nextEl: ".project__partners-btn-next",
         prevEl: ".project__partners-btn-prev",
       },
+      // breakpoints: {
+      //   640: {
+      //     slidesPerView: 1,
+      //     spaceBetween: 20,
+      //   },
+      //   768: {
+      //     slidesPerView: 2,
+      //     spaceBetween: 40,
+      //   },
+      //   1340: {
+      //     slidesPerView: 2,
+      //     spaceBetween: 50,
+      //   },
+      // },
     });
   }
 

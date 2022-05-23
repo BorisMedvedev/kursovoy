@@ -26,6 +26,10 @@
       display: flex;
       justify-content: space-between;
     }
+
+    @include r(1340) {
+      display: none;
+    }
   }
 }
 
@@ -43,6 +47,7 @@
 }
 
 .nav {
+
   &__list {
     padding-right: 246px;
     display: flex;
@@ -58,6 +63,10 @@
     font-size: 18px;
     font-weight: 600;
     color: $white;
+  }
+
+  @include r(1340) {
+    display: none;
   }
 }
 
@@ -89,7 +98,28 @@
   &:active::before {
     filter: invert(69%) sepia(43%) saturate(879%) hue-rotate(230deg) brightness(97%) contrast(95%);
   }
+
+  @include r(1340) {
+    display: none;
+  }
 }
+
+.search-mobail {
+  width: 30px;
+  height: 30px;
+  background-image: url('../../images/icons/search.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: none;
+
+  @include r(1340) {
+    display: block;
+  }
+}
+
+
+
 
 .selection-menu {
   &__list {
@@ -102,6 +132,7 @@
 
     &:not(:last-child) {
       margin-right: 96px;
+
     }
   }
 
@@ -197,6 +228,7 @@
 .list-scroll.list-scroll--active {
   display: block;
 }
+
 
 .form-search {
   display: flex;
@@ -304,4 +336,18 @@
 
 .active {
   display: block;
+}
+
+.burger {
+  width: 36px;
+  height: 27px;
+  background-image: url('../../images/icons/burger.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: none;
+
+  @include r(1340) {
+    display: block;
+  }
 }
