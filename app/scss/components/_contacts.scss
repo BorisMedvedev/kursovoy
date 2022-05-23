@@ -1,7 +1,7 @@
 .contacts {
 
   &__form {
-    padding: 38px 0;
+    padding: 35px 0 38px;
     border-top: 1px solid $silver;
     border-bottom: 1px solid $silver;
   }
@@ -19,7 +19,7 @@
   }
 
   &__form-info {
-    margin-top: -12px;
+    margin-top: -6px;
   }
 
   &__form-info-address {
@@ -27,7 +27,7 @@
   }
 
   &__form-social-title {
-    margin-bottom: 4px;
+    margin-bottom: 7px;
     font-weight: 600;
     font-size: 24px;
 

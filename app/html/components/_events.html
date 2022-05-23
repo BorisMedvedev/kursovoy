@@ -10,7 +10,12 @@
         <li class="events-swiper__slide swiper-slide">
           <article class="card-events">
 
-            <img src="images/events/events1.jpg" alt="Книжная гравюра в живом восприятии" width="500" height="300">
+            <picture>
+              <source srcset="images/events/events5.jpg" media="(max-width: 320px)">
+              <source srcset="images/events/events5.jpg" media="(max-width: 768px)">
+              <source srcset="images/events/events5.jpg" media="(max-width: 1024px)">
+              <img class="images/events/events1.jpg" src="images/events/events1.jpg" alt="Книжная гравюра">
+            </picture>
 
             <div class="card-events__content">
 
@@ -21,7 +26,10 @@
                     с 20 марта по 30 апреля
                   </time>
                 </span>
-                <h4 class="card-events__info-title">Книжная гравюра в живом восприятии</h4>
+                <div>
+
+                  <h4 class="card-events__info-title">Книжная гравюра в живом восприятии</h4>
+                </div>
                 <div class="card-events__info-text">
                   <p>
                     Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую

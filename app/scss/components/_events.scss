@@ -1,6 +1,6 @@
 .events {
   position: relative;
-  padding: 80px 0;
+
 }
 
 .events-swiper {
@@ -13,16 +13,16 @@
 
 .card-events {
   max-width: 500px;
-  min-height: 700px;
   background-color: $white;
   border: 1px solid $gallery;
 
   &__content {
-    min-height: 340px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 13px 50px 40px;
+    padding: 15px 50px 45px;
+
+  }
+
+  &__info {
+    margin-bottom: 80px;
   }
 
   &__info-date {
@@ -38,12 +38,12 @@
     margin: 0 0 3px;
     font-weight: 600;
     font-size: 24px;
-    line-height: 1.4;
+    line-height: 33px;
   }
 
   &__info-text p {
-    margin: 0 0 65px;
-    line-height: 2;
+    margin: 0;
+    line-height: 32px;
   }
 
   &__link {
@@ -62,9 +62,11 @@
   transition: opacity 0.3s, background-color 0.3s;
 
   &::before {
-    transform: rotate(90deg);
+    width: 15px;
+    height: 9px;
     top: 20px;
     left: 20px;
+    transform: rotate(90deg);
   }
 }
 
@@ -78,9 +80,11 @@
   transition: opacity 0.3s, background-color 0.3s;
 
   &::before {
+    width: 15px;
+    height: 9px;
     left: 20px;
-    transform: rotate(-90deg);
     top: 20px;
+    transform: rotate(-90deg);
 
   }
 }
