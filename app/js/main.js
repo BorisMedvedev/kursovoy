@@ -247,3 +247,13 @@ document.addEventListener("DOMContentLoaded", function () {
   tabsContent();
   contactsForm();
 });
+
+const burger = document.querySelector(".burger");
+
+burger.addEventListener("click", toggleNav);
+
+function toggleNav() {
+  burger.classList.contains("is-active")
+    ? burger.classList.remove("is-active")
+    : burger.classList.add("is-active");
+}

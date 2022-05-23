@@ -339,15 +339,53 @@
 }
 
 .burger {
-  width: 36px;
-  height: 27px;
-  background-image: url('../../images/icons/burger.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
   display: none;
 
-  @include r(1340) {
+  &.is-active {
+    .burger__line {
+      transition: transform 0.2s cubic-bezier(.54, .1, .42, 1.48), width 0.2s ease-in;
+
+      &:first-child {
+        transform: rotate(45deg) translate(1px, -1px);
+        width: 19px;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: rotate(136deg) translate(8px, 17px);
+        width: 19px;
+      }
+    }
+  }
+
+  &__line {
     display: block;
+    height: 2px;
+    background-color: $white;
+    transition: transform 0.2s cubic-bezier(.54, .1, .42, 1.48), width 0.2s ease-out;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &:first-child {
+      transform-origin: 0 50%;
+      width: 36px;
+    }
+
+    &:nth-child(2) {
+      width: 28px;
+    }
+
+    &:last-child {
+      transform-origin: 100% 50%;
+      width: 24px;
+    }
   }
 }
