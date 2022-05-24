@@ -389,3 +389,7 @@
     }
   }
 }
+
+.list-scroll.active>.selection-menu__btn::before {
+  transform: rotate(180deg);
+}

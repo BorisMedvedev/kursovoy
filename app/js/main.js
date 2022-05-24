@@ -127,6 +127,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function newAccordion() {
     new Accordion(".accordion-list", {
+      duration: 400,
+      openOnInit: [0],
       elementClass: "accordion",
       triggerClass: "accordion-list__btn",
       panelClass: "accordion-list__content",
@@ -235,6 +237,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function burgerBtn() {
+    const burger = document.querySelector(".burger");
+
+    burger.addEventListener("click", toggleNav);
+
+    function toggleNav() {
+      burger.classList.contains("is-active")
+        ? burger.classList.remove("is-active")
+        : burger.classList.add("is-active");
+    }
+  }
+
   contactsMap();
   navigation();
   defaultSelect();
@@ -246,14 +260,5 @@ document.addEventListener("DOMContentLoaded", function () {
   tulTip();
   tabsContent();
   contactsForm();
+  burgerBtn();
 });
-
-const burger = document.querySelector(".burger");
-
-burger.addEventListener("click", toggleNav);
-
-function toggleNav() {
-  burger.classList.contains("is-active")
-    ? burger.classList.remove("is-active")
-    : burger.classList.add("is-active");
-}
