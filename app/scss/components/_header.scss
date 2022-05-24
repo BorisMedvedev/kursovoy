@@ -47,7 +47,6 @@
 }
 
 .nav {
-
   &__list {
     padding-right: 246px;
     display: flex;
@@ -107,7 +106,7 @@
 .search-mobail {
   width: 30px;
   height: 30px;
-  background-image: url('../../images/icons/search.svg');
+  background-image: url("../../images/icons/search.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -117,9 +116,6 @@
     display: block;
   }
 }
-
-
-
 
 .selection-menu {
   &__list {
@@ -132,7 +128,6 @@
 
     &:not(:last-child) {
       margin-right: 96px;
-
     }
   }
 
@@ -161,20 +156,20 @@
       z-index: 10;
       transition: color 0.2s, filter 0.2s;
     }
-
   }
 }
 
-
 .list-scroll {
-  display: none;
   position: absolute;
   top: 45px;
   padding: 40px;
   width: 300px;
   height: 300px;
   background-color: rgba($black, 0.6);
-
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.2);
+  transition: all 0.5s;
 
   &__item {
     &:not(:last-child) {
@@ -215,7 +210,10 @@
         width: 100%;
         height: 100%;
         display: block;
-        background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(.jpg);
+        background: linear-gradient(0deg,
+            rgba(194, 131, 243, 0.4),
+            rgba(194, 131, 243, 0.4)),
+          url(.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -225,10 +223,11 @@
   }
 }
 
-.list-scroll.list-scroll--active {
-  display: block;
+.active {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
 }
-
 
 .form-search {
   display: flex;
@@ -304,9 +303,6 @@
   }
 }
 
-
-
-
 [data-simplebar] {
   overflow: auto;
 }
@@ -333,11 +329,6 @@
   background-color: $white;
 }
 
-
-.active {
-  display: block;
-}
-
 .burger {
   width: 30px;
   height: 30px;
@@ -346,7 +337,8 @@
 
   &.is-active {
     .burger__line {
-      transition: transform 0.2s cubic-bezier(.54, .1, .42, 1.48), width 0.2s ease-in;
+      transition: transform 0.2s cubic-bezier(0.54, 0.1, 0.42, 1.48),
+        width 0.2s ease-in;
 
       &:first-child {
         transform: rotate(45deg) translate(1px, -1px);
@@ -368,7 +360,8 @@
     display: block;
     height: 2px;
     background-color: $white;
-    transition: transform 0.2s cubic-bezier(.54, .1, .42, 1.48), width 0.2s ease-out;
+    transition: transform 0.2s cubic-bezier(0.54, 0.1, 0.42, 1.48),
+      width 0.2s ease-out;
 
     &:not(:last-child) {
       margin-bottom: 8px;
@@ -388,8 +381,4 @@
       width: 24px;
     }
   }
-}
-
-.list-scroll.active>.selection-menu__btn::before {
-  transform: rotate(180deg);
 }

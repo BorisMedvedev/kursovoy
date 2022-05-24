@@ -249,6 +249,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function modalPopup() {
+    const openBtn = document.querySelector(".exit-btn");
+    const modal = document.querySelector(".modal-popup");
+    const closeBtn = document.querySelector(".close-btn");
+    openBtn.addEventListener("click", () => {
+      modal.showModal();
+    });
+    closeBtn.addEventListener("click", () => {
+      modal.close();
+    });
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.close();
+    });
+  }
+
   contactsMap();
   navigation();
   defaultSelect();
@@ -261,4 +276,5 @@ document.addEventListener("DOMContentLoaded", function () {
   tabsContent();
   contactsForm();
   burgerBtn();
+  modalPopup();
 });

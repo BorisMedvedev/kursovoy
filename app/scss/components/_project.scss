@@ -1,5 +1,5 @@
 .project {
-  padding: 80px 0 80px;
+  padding: 82px 0 77px;
 
   &__title {
     margin-bottom: 18px;
@@ -85,7 +85,7 @@
 }
 
 .project-slider__link:focus {
-  filter: grayscale(1);
+  filter: grayscale(0);
   opacity: 1;
 }
 
@@ -144,7 +144,6 @@
   }
 
   &:active {
-
     background-color: $amethyst;
   }
 
@@ -156,30 +155,23 @@
 
 }
 
+.project__partners-btn {
+  background-image: url('../../images/icons/arrow-min.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .project__partners-btn-prev {
   transition: opacity 0.3s;
 
-  &::before {
-    transform: rotate(90deg);
-  }
+
 }
 
 .project__partners-btn-next {
   transition: opacity 0.3s;
+  transform: rotate(180deg);
 
-  &::before {
-    transform: rotate(-90deg);
-  }
 }
-
-.project__partners-btn-prev.swiper-button-disabled {
-  opacity: 1;
-}
-
-.project__partners-btn-next.swiper-button-disabled {
-  opacity: 1;
-}
-
 
 .tippy-box[data-theme~='amethyst'][data-placement^='top']>.tippy-arrow::before {
   border-top-color: $amethyst;
