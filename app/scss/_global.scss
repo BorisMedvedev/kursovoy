@@ -28,6 +28,15 @@ body {
   padding: 0 15px;
   max-width: 1630px;
   width: 100%;
+
+  @include r(1024) {
+    max-width: 955px;
+  }
+
+  @include r(768) {
+    max-width: 698px;
+  }
+
 }
 
 a {
@@ -76,6 +85,10 @@ img {
   font-weight: 400;
   font-style: normal;
   font-size: 48px;
+
+  @include r(440) {
+    font-size: 28px;
+  }
 }
 
 .slider-btn {

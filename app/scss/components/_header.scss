@@ -6,6 +6,10 @@
     padding: 30px 0;
     background-color: $black;
 
+    @include r(600) {
+      padding: 12px 0;
+    }
+
     &-inner {
       display: flex;
       align-items: center;
@@ -37,8 +41,17 @@
   display: inline-block;
 
   &__img {
+    width: 173px;
     transition: filter 0.2s;
     fill: $white;
+
+    @include r(1024) {
+      width: 188px;
+    }
+
+    @include r(600) {
+      width: 97px;
+    }
   }
 
   &:hover .logo__img {
@@ -112,8 +125,19 @@
   background-position: center center;
   display: none;
 
+
   @include r(1340) {
     display: block;
+  }
+
+  @include r(768) {
+    width: 27px;
+    height: 27px;
+  }
+
+  @include r(600) {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -335,13 +359,22 @@
   cursor: pointer;
   display: none;
 
+  @include r(1340) {
+    display: block;
+  }
+
+  @include r(600) {
+    width: 27px;
+    height: 18px;
+  }
+
   &.is-active {
     .burger__line {
       transition: transform 0.2s cubic-bezier(0.54, 0.1, 0.42, 1.48),
         width 0.2s ease-in;
 
       &:first-child {
-        transform: rotate(45deg) translate(1px, -1px);
+        transform: rotate(45deg) translate(2px, 2px);
         width: 19px;
       }
 
@@ -350,7 +383,7 @@
       }
 
       &:last-child {
-        transform: rotate(136deg) translate(8px, 17px);
+        transform: rotate(136deg) translate(8px, 19px);
         width: 19px;
       }
     }
@@ -358,27 +391,55 @@
 
   &__line {
     display: block;
-    height: 2px;
+    height: 4px;
     background-color: $white;
     transition: transform 0.2s cubic-bezier(0.54, 0.1, 0.42, 1.48),
       width 0.2s ease-out;
 
+    @include r(768) {
+      height: 3px;
+    }
+
+    @include r(440) {
+      height: 2px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 8px;
+
+      @include r(768) {
+        margin-bottom: 9px;
+      }
+
+      @include r(600) {
+        margin-bottom: 6px;
+      }
     }
 
     &:first-child {
       transform-origin: 0 50%;
       width: 36px;
+
+      @include r(440) {
+        width: 25px;
+      }
     }
 
     &:nth-child(2) {
       width: 28px;
+
+      @include r(440) {
+        width: 16px;
+      }
     }
 
     &:last-child {
       transform-origin: 100% 50%;
       width: 24px;
+
+      @include r(440) {
+        width: 10px;
+      }
     }
   }
 }

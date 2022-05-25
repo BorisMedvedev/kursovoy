@@ -7,6 +7,10 @@
 
   &__inner {
     display: flex;
+
+    @include r(1340) {
+      flex-wrap: wrap;
+    }
   }
 }
 

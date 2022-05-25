@@ -29,10 +29,29 @@ document.addEventListener("DOMContentLoaded", function () {
         nextEl: ".gallery-slider__btn-next",
         prevEl: ".gallery-slider__btn-prev",
       },
+
       pagination: {
         el: ".gallery-slider__pagination",
         type: "fraction",
         clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
       },
     });
   }
@@ -127,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function newAccordion() {
     new Accordion(".accordion-list", {
-      duration: 600,
+      duration: 400,
       openOnInit: [0],
       elementClass: "accordion",
       triggerClass: "accordion-list__btn",
@@ -167,20 +186,21 @@ document.addEventListener("DOMContentLoaded", function () {
   function tulTip() {
     tippy(".tultip-1", {
       content:
-        "Пример современных тенденций - современная методология разработки",
+        " уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде",
       theme: "amethyst",
 
       trigger: "click",
     });
     tippy(".tultip-2", {
-      content: "В стремлении повысить качество",
+      content:
+        "современных социальных резервов призывают нас к новым свершениям,",
       theme: "amethyst",
 
       trigger: "click",
     });
     tippy(".tultip-3", {
       content:
-        "Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции",
+        "с не уникальными данными до степени совершенной неузнаваемости.",
       theme: "amethyst",
 
       trigger: "click",
