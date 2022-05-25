@@ -5,7 +5,7 @@
     margin-bottom: 19px;
   }
 
-  &__text p {
+  &__text {
     margin: 0 0 37px;
     max-width: 1080px;
     line-height: 2;
@@ -100,6 +100,11 @@
       border-color: #9d5cd0;
     }
 
+    &:active {
+      color: #7943A4;
+      border-color: #7943A4;
+    }
+
     &:hover::after {
       opacity: 0;
     }
@@ -177,6 +182,10 @@
     &:active {
       color: #7943A4;
       border-bottom: 1px solid transparent;
+    }
+
+    &:active::after {
+      background-color: transparent;
     }
 
   }

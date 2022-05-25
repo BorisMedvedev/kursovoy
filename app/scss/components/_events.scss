@@ -41,7 +41,6 @@
 
   &__info-date {
     display: block;
-    max-width: 190px;
     margin-bottom: 14px;
     font-weight: 600;
     font-size: 12px;
@@ -55,7 +54,7 @@
     line-height: 33px;
   }
 
-  &__info-text p {
+  &__info-text {
     margin: 0;
     line-height: 32px;
   }

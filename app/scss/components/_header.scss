@@ -138,7 +138,7 @@
     font-size: 18px;
     font-family: "OpenSans", sans-serif;
     font-weight: 400;
-    transition: transform 0.3s;
+    transition: color 0.2s, filter 0.2s, transform 0.3s;
 
     &::before {
       content: "";

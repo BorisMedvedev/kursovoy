@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function newAccordion() {
     new Accordion(".accordion-list", {
-      duration: 400,
+      duration: 600,
       openOnInit: [0],
       elementClass: "accordion",
       triggerClass: "accordion-list__btn",
@@ -167,21 +167,20 @@ document.addEventListener("DOMContentLoaded", function () {
   function tulTip() {
     tippy(".tultip-1", {
       content:
-        " уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде",
+        "Пример современных тенденций - современная методология разработки",
       theme: "amethyst",
 
       trigger: "click",
     });
     tippy(".tultip-2", {
-      content:
-        "современных социальных резервов призывают нас к новым свершениям,",
+      content: "В стремлении повысить качество",
       theme: "amethyst",
 
       trigger: "click",
     });
     tippy(".tultip-3", {
       content:
-        "с не уникальными данными до степени совершенной неузнаваемости.",
+        "Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции",
       theme: "amethyst",
 
       trigger: "click",

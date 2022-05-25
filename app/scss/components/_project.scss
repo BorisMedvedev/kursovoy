@@ -5,7 +5,7 @@
     margin-bottom: 18px;
   }
 
-  &__text p {
+  &__text {
     margin: 0 0 18px;
     max-width: 1080px;
     line-height: 2;
@@ -178,6 +178,13 @@
 }
 
 .tippy-box[data-theme~='amethyst'] {
+  padding: 7px 0;
+  width: 264px;
+  text-align: center;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
   background-color: $amethyst;
   color: $white;
 
