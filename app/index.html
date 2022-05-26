@@ -313,7 +313,12 @@
 
           <ul class="gallery-slider__list list-reset swiper-wrapper">
             <li class="gallery-slider__item swiper-slide">
-              <img src="images/slider/slide1.jpg" alt="фотография">
+              <picture>
+                <source srcset="images/slider/slidemob-1.jpg" media="(max-width: 440px)">
+                <!-- <source srcset="images/events/events5.jpg" media="(max-width: 320px)">
+                <source srcset="images/events/events5.jpg" media="(max-width: 1024px)"> -->
+                <img class="gallery-slider__img" src="images/slider/slide1.jpg" alt="Книжная гравюра">
+              </picture>
             </li>
             <li class="gallery-slider__item swiper-slide">
               <img src="images/slider/slide2.jpg" alt="фотография">
@@ -365,7 +370,12 @@
 
     <div class="catalog__wrapper">
       <div class="catalog__author-information catalog__author-information--active" data-target="domenico">
-        <img class="catalog__author-img" src="images/author.jpg" alt="Доменико Гирландайо" width="750" height="470" />
+        <picture>
+          <!-- <source srcset="images/slider/slidemob-1.jpg" media="(max-width: 440px)"> -->
+          <source srcset="images/author77.jpg" media="(max-width: 768px)">
+          <source srcset="images/authortabl-1.jpg" media="(max-width: 1600px)">
+          <img class="catalog__author-img" src="images/author.jpg" alt="Книжная гравюра">
+        </picture>
         <h4 class="catalog__author-title">Доменико Гирландайо</h4>
         <span class="catalog__author-date">2 июня 1448 — 11 января 1494.</span>
         <p class="catalog__text">
@@ -381,7 +391,12 @@
       </div>
 
       <div class="catalog__author-information" data-target="two">
-        <img class="catalog__author-img" src="images/author2.jpg" alt="Доменико Гирландайо" width="750" height="470" />
+        <picture>
+          <!-- <source srcset="images/slider/slidemob-1.jpg" media="(max-width: 440px)">
+          <source srcset="images/events/events5.jpg" media="(max-width: 320px)"> -->
+          <source srcset="images/authortabl-1.jpg" media="(max-width: 1600px)">
+          <img class="catalog__author-img" src="images/author.jpg" alt="Книжная гравюра">
+        </picture>
         <h4 class="catalog__author-title">Что мы о нём знаем?</h4>
         <span class="catalog__author-date"></span>
         <p class="catalog__text catalog__text--mb">

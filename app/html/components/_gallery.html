@@ -41,7 +41,12 @@
 
           <ul class="gallery-slider__list list-reset swiper-wrapper">
             <li class="gallery-slider__item swiper-slide">
-              <img src="images/slider/slide1.jpg" alt="фотография">
+              <picture>
+                <source srcset="images/slider/slidemob-1.jpg" media="(max-width: 440px)">
+                <!-- <source srcset="images/events/events5.jpg" media="(max-width: 320px)">
+                <source srcset="images/events/events5.jpg" media="(max-width: 1024px)"> -->
+                <img class="gallery-slider__img" src="images/slider/slide1.jpg" alt="Книжная гравюра">
+              </picture>
             </li>
             <li class="gallery-slider__item swiper-slide">
               <img src="images/slider/slide2.jpg" alt="фотография">

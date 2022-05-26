@@ -1,6 +1,10 @@
 .catalog {
   padding: 82px 0 78px;
 
+  @include r(440) {
+    padding: 50px 0;
+  }
+
   &__title {
     margin-bottom: 19px;
   }
@@ -18,6 +22,15 @@
   &__author-information {
     display: none;
     max-width: 750px;
+
+    @include r(1600) {
+      max-width: 437px;
+    }
+
+    @include r(960) {
+      max-width: 100%;
+      order: 2;
+    }
 
     &--active {
       display: block;
@@ -43,12 +56,25 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include r(940) {
+      flex-wrap: wrap;
+    }
   }
 }
 
 .accordion-list {
   max-width: 800px;
   width: 100%;
+
+  @include r(1340) {
+    max-width: 437px;
+  }
+
+  @include r(960) {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
 
   &__item {
     padding: 0;
@@ -77,6 +103,11 @@
     border-bottom: 1px solid #cacaca;
     transition: border-color 0.3s, color 0.3s;
 
+    @include r(440) {
+      padding: 20px 0 20px;
+      font-size: 18px;
+    }
+
     &:focus {
       color: #ececec;
     }
@@ -93,6 +124,11 @@
       background-image: url("../../images/icons/arrow-black.svg");
       background-repeat: no-repeat;
       background-position: center center;
+
+      @include r(440) {
+        background-image: url("../../images/icons/accordbot.svg");
+
+      }
     }
 
     &:hover {
@@ -132,6 +168,12 @@
       background-repeat: no-repeat;
       background-position: center center;
       transition: background 0.2s;
+
+      @include r(440) {
+        background-image: url("../../images/icons/accordbot.svg");
+        width: 30px;
+        height: 30px;
+      }
     }
 
     &::after {
@@ -151,14 +193,30 @@
   }
 
   &__inner-content {
-    display: flex;
+    column-count: 3;
     padding: 25px 0;
+
+    @include r(1024) {
+      column-count: 2;
+    }
+
+    @include r(960) {
+      column-count: 3;
+    }
+
+    @include r(660) {
+      column-count: 1;
+    }
 
   }
 
   &__inner-list {
     &:not(:last-child) {
       margin-right: 60px;
+
+      @include r(1024) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -261,6 +319,11 @@
   background-image: url("../../images/icons/arrow-black-top.svg");
   background-repeat: no-repeat;
   background-position: center center;
+
+  @include r(440) {
+    background-image: url("../../images/icons/accordtop.svg");
+
+  }
 }
 
 .accordion-list__item.accordion--active .accordion-list__btn {
