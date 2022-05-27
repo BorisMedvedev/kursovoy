@@ -297,6 +297,8 @@
     position: relative;
     cursor: pointer;
 
+
+
     &::before {
       position: absolute;
       content: "";
@@ -402,11 +404,4 @@
 
 .gallery-slider__btn-next.swiper-button-disabled {
   opacity: 0.5;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }

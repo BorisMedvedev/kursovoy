@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       breakpoints: {
         320: {
-          // slidesPerView: 1,
           slidesPerView: 1,
           centeredSlides: true,
         },
@@ -70,26 +69,34 @@ document.addEventListener("DOMContentLoaded", function () {
         nextEl: ".events-swiper__next",
         prevEl: ".events-swiper__prev",
       },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
       breakpoints: {
         320: {
           slidesPerView: 1,
-          centeredSlides: true,
+          centeredSlides: 50,
         },
         640: {
-          slidesPerView: 1,
-          centeredSlides: true,
+          slidesPerView: 2,
+          centeredSlides: 50,
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 34,
+          spaceBetween: 50,
         },
         1024: {
-          slidesPerView: 2,
-          spaceBetween: 34,
+          slidesPerView: 3,
+          spaceBetween: 50,
         },
         1340: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 50,
+        },
+        1600: {
+          slidesPerGroup: 2,
         },
       },
     });
@@ -102,10 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
       navigation: {
         nextEl: ".project__partners-btn-next",
         prevEl: ".project__partners-btn-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
       },
       breakpoints: {
         320: {
