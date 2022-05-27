@@ -2,16 +2,29 @@
   padding: 48px 0;
   background-color: $black;
 
+  @include r(440) {
+    padding: 20px 0;
+  }
+
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include r(440) {
+      flex-direction: column;
+    }
   }
 
   .footer-social-list {
     display: flex;
     align-items: center;
+
+    @include r(440) {
+      order: -1;
+      padding-bottom: 20px;
+    }
 
     &__item {
       &:not(:last-child) {

@@ -36,7 +36,6 @@ body {
   @include r(768) {
     max-width: 698px;
   }
-
 }
 
 a {
@@ -47,6 +46,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  width: 100%;
 }
 
 .list-reset {
@@ -159,7 +159,8 @@ img {
   }
 
   &:hover::before {
-    filter: invert(19%) sepia(30%) saturate(7421%) hue-rotate(217deg) brightness(92%) contrast(107%);
+    filter: invert(19%) sepia(30%) saturate(7421%) hue-rotate(217deg)
+      brightness(92%) contrast(107%);
   }
 
   &:active {
@@ -168,7 +169,8 @@ img {
   }
 
   &:active::before {
-    filter: invert(69%) sepia(18%) saturate(2784%) hue-rotate(236deg) brightness(98%) contrast(91%);
+    filter: invert(69%) sepia(18%) saturate(2784%) hue-rotate(236deg)
+      brightness(98%) contrast(91%);
   }
 
   &:active::after {

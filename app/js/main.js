@@ -84,12 +84,14 @@ document.addEventListener("DOMContentLoaded", function () {
           centeredSlides: 50,
         },
         768: {
+          slidesPerGroup: 3,
           slidesPerView: 2,
           spaceBetween: 50,
         },
         1024: {
+          slidesPerGroup: 2,
           slidesPerView: 3,
-          spaceBetween: 50,
+          spaceBetween: 27,
         },
         1340: {
           slidesPerView: 3,
@@ -123,13 +125,21 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerView: 1,
           spaceBetween: 34,
         },
+        940: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
         1024: {
           slidesPerView: 2,
-          spaceBetween: 34,
+          spaceBetween: 50,
         },
         1340: {
           slidesPerView: 3,
-          spaceBetween: 50,
+          spaceBetween: 40,
+        },
+        1560: {
+          slidesPerView: 3,
+          spaceBetween: 40,
         },
       },
     });
