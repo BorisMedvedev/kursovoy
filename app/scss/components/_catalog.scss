@@ -1,7 +1,6 @@
 .catalog {
   padding: 82px 0 78px;
 
-
   @include r(440) {
     padding: 50px 0;
   }
@@ -128,7 +127,6 @@
 
       @include r(440) {
         background-image: url("../../images/icons/accordbot.svg");
-
       }
     }
 
@@ -138,8 +136,8 @@
     }
 
     &:active {
-      color: #7943A4;
-      border-color: #7943A4;
+      color: #7943a4;
+      border-color: #7943a4;
     }
 
     &:hover::after {
@@ -208,7 +206,6 @@
     @include r(660) {
       column-count: 1;
     }
-
   }
 
   &__inner-list {
@@ -235,18 +232,17 @@
     transition: border 0.3s;
 
     &:hover {
-      border-bottom: 1px solid #9D5CD0;
+      border-bottom: 1px solid #9d5cd0;
     }
 
     &:active {
-      color: #7943A4;
+      color: #7943a4;
       border-bottom: 1px solid transparent;
     }
 
     &:active::after {
       background-color: transparent;
     }
-
   }
 
   &__inner-btn--active {
@@ -300,13 +296,11 @@
     margin-bottom: 5px;
   }
 
-
   &__inner-content-noflex {
     display: block;
-
+    column-count: 1;
   }
 }
-
 
 .inner-link {
   font-weight: 600;
@@ -323,7 +317,6 @@
 
   @include r(440) {
     background-image: url("../../images/icons/accordtop.svg");
-
   }
 }
 

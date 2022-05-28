@@ -300,6 +300,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function burgerBtn1() {
+    const burger = document.querySelector(".burger");
+    const menu = document.querySelector(".nav");
+
+    burger.addEventListener("click", toggleNav);
+
+    function toggleNav() {
+      menu.classList.contains("btn-active")
+        ? menu.classList.remove("btn-active")
+        : menu.classList.add("btn-active");
+    }
+  }
+
   function modalPopup() {
     const openBtn = document.querySelector(".exit-btn");
     const modal = document.querySelector(".modal-popup");
@@ -328,4 +341,5 @@ document.addEventListener("DOMContentLoaded", function () {
   contactsForm();
   burgerBtn();
   modalPopup();
+  burgerBtn1();
 });

@@ -2,7 +2,6 @@
   max-height: 100px;
   position: relative;
 
-
   &__top {
     padding: 30px 0;
     background-color: $black;
@@ -56,19 +55,45 @@
   }
 
   &:hover .logo__img {
-    filter: invert(57%) sepia(90%) saturate(541%) hue-rotate(230deg) brightness(86%) contrast(87%);
+    filter: invert(57%) sepia(90%) saturate(541%) hue-rotate(230deg)
+      brightness(86%) contrast(87%);
   }
 }
 
 .nav {
+  transition: transform 0.5s;
+  @include r(1340) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 15px;
+    padding-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    transform: translateX(-200%);
+  }
   &__list {
     padding-right: 246px;
     display: flex;
+    @include r(1340) {
+      padding: 100px 0;
+      padding-right: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      max-height: 100%;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 62px;
+      @include r(1340) {
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -77,10 +102,10 @@
     font-weight: 600;
     color: $white;
   }
+}
 
-  @include r(1340) {
-    display: none;
-  }
+.nav.btn-active {
+  transform: translateX(0);
 }
 
 .exit-btn {
@@ -88,6 +113,9 @@
   padding-left: 22px;
   color: $white;
 
+  @include r(1340) {
+    display: none;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -105,18 +133,34 @@
   }
 
   &:hover::before {
-    filter: invert(57%) sepia(90%) saturate(541%) hue-rotate(230deg) brightness(86%) contrast(87%);
+    filter: invert(57%) sepia(90%) saturate(541%) hue-rotate(230deg)
+      brightness(86%) contrast(87%);
   }
 
   &:active::before {
-    filter: invert(69%) sepia(43%) saturate(879%) hue-rotate(230deg) brightness(97%) contrast(95%);
+    filter: invert(69%) sepia(43%) saturate(879%) hue-rotate(230deg)
+      brightness(97%) contrast(95%);
   }
-
+}
+.exit-btn-mabail {
+  max-width: 115px;
+  padding: 10px 40px;
+  border: 2px solid #9d5cd0;
+  border-radius: 100px;
+  display: none;
+  @include r(1340) {
+    display: block;
+  }
+}
+.exit-btn-mabail::after {
   @include r(1340) {
     display: none;
   }
 }
-
+.exit-btn-mabail::before {
+  left: 15px;
+  top: 14px;
+}
 .search-mobail {
   width: 30px;
   height: 30px;
@@ -125,7 +169,6 @@
   background-size: cover;
   background-position: center center;
   display: none;
-
 
   @include r(1340) {
     display: block;
@@ -235,9 +278,11 @@
         width: 100%;
         height: 100%;
         display: block;
-        background: linear-gradient(0deg,
+        background: linear-gradient(
+            0deg,
             rgba(194, 131, 243, 0.4),
-            rgba(194, 131, 243, 0.4)),
+            rgba(194, 131, 243, 0.4)
+          ),
           url(.jpg);
         background-repeat: no-repeat;
         background-position: center;
@@ -307,7 +352,8 @@
     background-position: center;
     background-size: cover;
     transition: filter 0.2s;
-    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(73deg) brightness(103%) contrast(101%);
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(73deg)
+      brightness(103%) contrast(101%);
     outline: none;
 
     &:focus {
@@ -318,12 +364,14 @@
 
     &:hover {
       outline: none;
-      filter: invert(57%) sepia(90%) saturate(541%) hue-rotate(230deg) brightness(86%) contrast(87%);
+      filter: invert(57%) sepia(90%) saturate(541%) hue-rotate(230deg)
+        brightness(86%) contrast(87%);
     }
 
     &:active {
       outline: none;
-      filter: invert(57%) sepia(90%) saturate(541%) hue-rotate(230deg) brightness(86%) contrast(87%);
+      filter: invert(57%) sepia(90%) saturate(541%) hue-rotate(230deg)
+        brightness(86%) contrast(87%);
     }
   }
 }
@@ -355,10 +403,12 @@
 }
 
 .burger {
+  position: relative;
   width: 30px;
   height: 30px;
   cursor: pointer;
   display: none;
+  z-index: 999;
 
   @include r(1340) {
     display: block;
@@ -377,6 +427,9 @@
       &:first-child {
         transform: rotate(45deg) translate(2px, 2px);
         width: 19px;
+        @include r(600) {
+          transform: rotate(45deg) translate(-2px, 2px);
+        }
       }
 
       &:nth-child(2) {
@@ -386,6 +439,12 @@
       &:last-child {
         transform: rotate(136deg) translate(8px, 19px);
         width: 19px;
+        @include r(600) {
+          transform: rotate(136deg) translate(12px, 19px);
+        }
+        @include r(440) {
+          transform: rotate(136deg) translate(13px, 17px);
+        }
       }
     }
   }
