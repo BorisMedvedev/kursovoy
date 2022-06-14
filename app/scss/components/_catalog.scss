@@ -1,9 +1,7 @@
 .catalog {
   padding: 82px 0 78px;
 
-  @include r(440) {
-    padding: 50px 0;
-  }
+
 
   &__title {
     margin-bottom: 19px;
@@ -23,14 +21,7 @@
     display: none;
     max-width: 750px;
 
-    @include r(1600) {
-      max-width: 437px;
-    }
 
-    @include r(960) {
-      max-width: 100%;
-      order: 2;
-    }
 
     &--active {
       display: block;
@@ -57,9 +48,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include r(940) {
-      flex-wrap: wrap;
-    }
+
   }
 }
 
@@ -67,14 +56,7 @@
   max-width: 800px;
   width: 100%;
 
-  @include r(1340) {
-    max-width: 437px;
-  }
 
-  @include r(960) {
-    max-width: 100%;
-    margin-bottom: 50px;
-  }
 
   &__item {
     padding: 0;
@@ -103,10 +85,7 @@
     border-bottom: 1px solid #cacaca;
     transition: border-color 0.3s, color 0.3s;
 
-    @include r(440) {
-      padding: 20px 0 20px;
-      font-size: 18px;
-    }
+
 
     &:focus {
       color: #ececec;
@@ -212,9 +191,7 @@
     &:not(:last-child) {
       margin-right: 60px;
 
-      @include r(1024) {
-        margin-right: 0;
-      }
+
     }
   }
 

@@ -32,6 +32,7 @@
     "tippy.js": "^6.3.7"
   },
   "dependencies": {
+    "jshint": "^2.13.4",
     "trim-newlines": "^4.0.2"
   }
 }
